@@ -2464,6 +2464,7 @@ MonoBehaviour:
   lobbyPanel: {fileID: 677713603}
   playersConnectedText: {fileID: 1853450}
   gameplayObjects: {fileID: 801751144}
+  titleSceneName: 
 --- !u!4 &1240734929
 Transform:
   m_ObjectHideFlags: 0
@@ -3552,7 +3553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989441342}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 268.64948, y: 355.86044, z: -269.8718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3581,7 +3582,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 172.17.162.174
+    Address: 0.0.0.0
     Port: 7777
     ServerListenAddress: 0.0.0.0
   DebugSimulator:
@@ -3961,10 +3962,10 @@ RectTransform:
   - {fileID: 64476286}
   m_Father: {fileID: 677713604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -226.7, y: -185}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -226.70001, y: -185.5}
+  m_SizeDelta: {x: -740, y: -421}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2099700584
 MonoBehaviour:
@@ -4575,7 +4576,7 @@ SceneRoots:
   - {fileID: 504168849633269300}
   - {fileID: 1891436455}
   - {fileID: 621598508}
-  - {fileID: 1989441345}
   - {fileID: 1240734929}
   - {fileID: 801751145}
   - {fileID: 149610492}
+  - {fileID: 1989441345}
