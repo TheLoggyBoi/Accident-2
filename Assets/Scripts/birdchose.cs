@@ -6,7 +6,7 @@ public class birchose : MonoBehaviour
 {
     [Header("References")]
     public Dropdown dropdown;            // Assign in Inspector (or put this script on the Dropdown)
-    public Transform objectToMove;       // The GameObject you want to move
+    public Transform objectToMove;       
 
     [Tooltip("Targets must be in the same order as the dropdown options")]
     public List<Transform> locations = new();  // Create empty Transforms in scene as markers
