@@ -2537,6 +2537,7 @@ MonoBehaviour:
   objectToMove: {fileID: 2083279148}
   locations:
   - {fileID: 1702808631}
+  applyOnStart: 1
 --- !u!1 &677713603
 GameObject:
   m_ObjectHideFlags: 0
@@ -4817,7 +4818,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702808631}
-  - component: {fileID: 1702808632}
   m_Layer: 0
   m_Name: ' BirdSlingshotLocation'
   m_TagString: Untagged
@@ -4840,22 +4840,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1702808632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1702808630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f95a7be4111c0dc429c033b97d8e6607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropdown: {fileID: 641420282}
-  objectToMove: {fileID: 2083279148}
-  locations:
-  - {fileID: 1702808631}
 --- !u!1 &1720445868
 GameObject:
   m_ObjectHideFlags: 0

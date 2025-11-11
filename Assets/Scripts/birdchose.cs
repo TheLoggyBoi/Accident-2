@@ -2,14 +2,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class birchose : MonoBehaviour
+public class birdchose : MonoBehaviour
 {
     [Header("References")]
     public Dropdown dropdown;            // Assign in Inspector (or put this script on the Dropdown)
-    public Transform objectToMove;       
+    public Transform objectToMove;       // The GameObject you want to move
 
     [Tooltip("Targets must be in the same order as the dropdown options")]
     public List<Transform> locations = new();  // Create empty Transforms in scene as markers
+
+    [Header("Behavior")]
+    [SerializeField] private bool applyOnStart = false; // default false -> don't move on start
 
     private void Awake()
     {
@@ -31,8 +34,8 @@ public class birchose : MonoBehaviour
 
     private void Start()
     {
-        // Apply current selection on start
-        if (dropdown != null)
+        // Only apply on start if you explicitly want that behavior
+        if (applyOnStart && dropdown != null)
             OnChanged(dropdown.value);
     }
 
@@ -40,9 +43,8 @@ public class birchose : MonoBehaviour
     {
         if (objectToMove == null || index < 0 || index >= locations.Count) return;
 
-        // Teleport
         objectToMove.position = locations[index].position;
-        // Optional: also match rotation
+        // Optional:
         // objectToMove.rotation = locations[index].rotation;
     }
 }
