@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class birdchose : MonoBehaviour
+public class Birdchose : MonoBehaviour
 {
     [Header("References")]
     public Dropdown dropdown;
