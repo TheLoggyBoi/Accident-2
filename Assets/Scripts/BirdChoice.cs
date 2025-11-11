@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,12 +6,10 @@ public class BirdChoice : MonoBehaviour
 {
     [Header("References")]
     public Dropdown dropdown;
-    public Transform objectToMove;
+    public Transform objectToMove;       // The specific object THIS dropdown controls
+
     [Tooltip("Targets must be in the same order as the dropdown options")]
     public List<Transform> locations = new();
-
-    private int lastIndex = -1; // track last applied index
-    private bool initialized = false;
 
     private void Awake()
     {
@@ -22,26 +19,11 @@ public class BirdChoice : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Init());
-    }
-
-    private IEnumerator Init()
-    {
-        // Wait 2 frames to let Unity finish all initialization
-        yield return null;
-        yield return null;
-
         if (dropdown != null)
-        {
-            // Store initial value but DON'T teleport
-            lastIndex = dropdown.value;
             dropdown.onValueChanged.AddListener(OnChanged);
-        }
-
-        initialized = true;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         if (dropdown != null)
             dropdown.onValueChanged.RemoveListener(OnChanged);
@@ -49,21 +31,14 @@ public class BirdChoice : MonoBehaviour
 
     private void OnChanged(int index)
     {
-        // Only teleport if:
-        // 1. We're fully initialized
-        // 2. The index actually changed
-        if (!initialized) return;
-        if (index == lastIndex) return;
+        if (objectToMove == null || index < 0 || index >= locations.Count)
+        {
+            Debug.LogWarning($"[BirdChoice] Cannot teleport - invalid index {index} or missing references", this);
+            return;
+        }
 
-        Teleport(index);
-        lastIndex = index;
-    }
-
-    private void Teleport(int index)
-    {
-        if (objectToMove == null || index < 0 || index >= locations.Count) return;
+        Debug.Log($"[BirdChoice] Teleporting {objectToMove.name} to {locations[index].name} (index {index})", this);
         objectToMove.position = locations[index].position;
         // objectToMove.rotation = locations[index].rotation;
     }
-
 }

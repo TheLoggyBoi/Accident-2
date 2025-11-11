@@ -2537,7 +2537,6 @@ MonoBehaviour:
   objectToMove: {fileID: 2083279148}
   locations:
   - {fileID: 1702808631}
-  applyOnStart: 1
 --- !u!1 &677713603
 GameObject:
   m_ObjectHideFlags: 0
