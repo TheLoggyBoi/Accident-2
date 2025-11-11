@@ -4800,6 +4800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702808631}
+  - component: {fileID: 1702808632}
   m_Layer: 0
   m_Name: ' BirdSlingshotLocation'
   m_TagString: Untagged
@@ -4822,6 +4823,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1702808632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702808630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95a7be4111c0dc429c033b97d8e6607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionA: {fileID: 641420282}
+  OptionB: {fileID: 641420282}
+  OptionC: {fileID: 641420282}
+  OptionD: {fileID: 641420282}
+  terry1: {fileID: 759451954}
+  terry2: {fileID: 0}
+  Detonator1: {fileID: 2083279148}
+  Detonator2: {fileID: 582316144}
+  TicTacToeBirds1: {fileID: 136624185}
+  TicTacToeBirds2: {fileID: 1247943726}
+  darcy1: {fileID: 846723840}
+  darcy2: {fileID: 417415630}
+  BirdSlingshotLocatoin: {fileID: 1702808631}
 --- !u!1 &1720445868
 GameObject:
   m_ObjectHideFlags: 0
