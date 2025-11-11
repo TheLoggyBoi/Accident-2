@@ -4852,9 +4852,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95a7be4111c0dc429c033b97d8e6607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropdown: {fileID: 0}
-  objectToMove: {fileID: 0}
-  locations: []
+  dropdown: {fileID: 641420282}
+  objectToMove: {fileID: 2083279148}
+  locations:
+  - {fileID: 1702808631}
 --- !u!1 &1720445868
 GameObject:
   m_ObjectHideFlags: 0
