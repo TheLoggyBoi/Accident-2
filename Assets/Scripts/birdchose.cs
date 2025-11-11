@@ -1,11 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+<<<<<<< HEAD
 using System.Collections.Generic;
 
 public class birdchose : MonoBehaviour
 {
     public Dropdown.OptionDataList Dropdown;
+=======
+
+public class birdchose : MonoBehaviour
+{
+    public Dropdown OptionA;
+    public Dropdown OptionB;
+    public Dropdown OptionC;
+    public Dropdown OptionD;
+>>>>>>> Dade
 
     public Transform terry1;
     public Transform terry2;
@@ -16,4 +26,17 @@ public class birdchose : MonoBehaviour
     public Transform darcy1;
     public Transform darcy2;
     public Transform BirdSlingshotLocatoin;
+<<<<<<< HEAD
 }
+=======
+
+
+    void Update()
+    {
+        if (OptionA != null && OptionB != null && OptionC != null)
+        {
+            TicTacToeBirds1.position = BirdSlingshotLocatoin.position;
+        }
+    }
+}
+>>>>>>> Dade
