@@ -2,21 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
-public class birchose : MonoBehaviour, IPointerDownHandler, ISubmitHandler
+public class birdchose : MonoBehaviour
 {
     [Header("References")]
-    public Dropdown dropdown;                  // Assign in Inspector (or put this script on the Dropdown)
-    public Transform objectToMove;             // The GameObject you want to move
+    public Dropdown dropdown;
+    public Transform objectToMove;
     [Tooltip("Targets must be in the same order as the dropdown options")]
-    public List<Transform> locations = new();  // Create empty Transforms in scene as markers
+    public List<Transform> locations = new();
 
-    [Header("Behavior")]
-    [SerializeField] private bool applyOnStart = false; // if true, move once on start to current value
-
-    private bool armed = false;     // becomes true only after user interaction
-    private bool subscribed = false;
+    private int lastIndex = -1; // track last applied index
+    private bool initialized = false;
 
     private void Awake()
     {
@@ -24,55 +20,50 @@ public class birchose : MonoBehaviour, IPointerDownHandler, ISubmitHandler
             dropdown = GetComponent<Dropdown>();
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        // Defer subscribing one frame so init-time value changes don't trigger us.
-        StartCoroutine(DeferredSubscribe());
+        StartCoroutine(Init());
     }
 
-    private IEnumerator DeferredSubscribe()
+    private IEnumerator Init()
     {
-        yield return null; // wait 1 frame
-        if (dropdown != null && !subscribed)
+        // Wait 2 frames to let Unity finish all initialization
+        yield return null;
+        yield return null;
+
+        if (dropdown != null)
         {
+            // Store initial value but DON'T teleport
+            lastIndex = dropdown.value;
             dropdown.onValueChanged.AddListener(OnChanged);
-            subscribed = true;
         }
 
-        if (applyOnStart && dropdown != null)
-        {
-            Teleport(dropdown.value);
-        }
+        initialized = true;
     }
 
     private void OnDisable()
     {
-        if (dropdown != null && subscribed)
-        {
+        if (dropdown != null)
             dropdown.onValueChanged.RemoveListener(OnChanged);
-            subscribed = false;
-        }
-        armed = false;
     }
-
-    // Mouse/touch opens the dropdown -> arm handling
-    public void OnPointerDown(PointerEventData eventData) => armed = true;
-
-    // Keyboard/gamepad submit -> arm handling
-    public void OnSubmit(BaseEventData eventData) => armed = true;
 
     private void OnChanged(int index)
     {
-        // Ignore any value changes until the user has interacted with the dropdown
-        if (!armed) return;
+        // Only teleport if:
+        // 1. We're fully initialized
+        // 2. The index actually changed
+        if (!initialized) return;
+        if (index == lastIndex) return;
+
         Teleport(index);
+        lastIndex = index;
     }
 
     private void Teleport(int index)
     {
         if (objectToMove == null || index < 0 || index >= locations.Count) return;
         objectToMove.position = locations[index].position;
-        // Optional: also match rotation
         // objectToMove.rotation = locations[index].rotation;
     }
+
 }
