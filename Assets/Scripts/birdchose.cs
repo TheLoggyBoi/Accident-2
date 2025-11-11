@@ -1,42 +1,48 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-<<<<<<< HEAD
-using System.Collections.Generic;
 
-public class birdchose : MonoBehaviour
+public class birchose : MonoBehaviour
 {
-    public Dropdown.OptionDataList Dropdown;
-=======
+    [Header("References")]
+    public Dropdown dropdown;            // Assign in Inspector (or put this script on the Dropdown)
+    public Transform objectToMove;       // The GameObject you want to move
 
-public class birdchose : MonoBehaviour
-{
-    public Dropdown OptionA;
-    public Dropdown OptionB;
-    public Dropdown OptionC;
-    public Dropdown OptionD;
->>>>>>> Dade
+    [Tooltip("Targets must be in the same order as the dropdown options")]
+    public List<Transform> locations = new();  // Create empty Transforms in scene as markers
 
-    public Transform terry1;
-    public Transform terry2;
-    public Transform Detonator1;
-    public Transform Detonator2;
-    public Transform TicTacToeBirds1;
-    public Transform TicTacToeBirds2;
-    public Transform darcy1;
-    public Transform darcy2;
-    public Transform BirdSlingshotLocatoin;
-<<<<<<< HEAD
-}
-=======
-
-
-    void Update()
+    private void Awake()
     {
-        if (OptionA != null && OptionB != null && OptionC != null)
-        {
-            TicTacToeBirds1.position = BirdSlingshotLocatoin.position;
-        }
+        if (dropdown == null)
+            dropdown = GetComponent<Dropdown>();
+    }
+
+    private void OnEnable()
+    {
+        if (dropdown != null)
+            dropdown.onValueChanged.AddListener(OnChanged);
+    }
+
+    private void OnDisable()
+    {
+        if (dropdown != null)
+            dropdown.onValueChanged.RemoveListener(OnChanged);
+    }
+
+    private void Start()
+    {
+        // Apply current selection on start
+        if (dropdown != null)
+            OnChanged(dropdown.value);
+    }
+
+    private void OnChanged(int index)
+    {
+        if (objectToMove == null || index < 0 || index >= locations.Count) return;
+
+        // Teleport
+        objectToMove.position = locations[index].position;
+        // Optional: also match rotation
+        // objectToMove.rotation = locations[index].rotation;
     }
 }
->>>>>>> Dade
