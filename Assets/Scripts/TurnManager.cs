@@ -33,6 +33,10 @@ public class TurnManager : NetworkBehaviour
     private bool isInitialized = false;
     private bool gameStarted = false;
 
+    //bird select
+    public GameObject playerUI1;
+    public GameObject playerUI2;
+
     public static TurnManager Instance { get; private set; }
 
     void Awake()
@@ -476,4 +480,17 @@ public class TurnManager : NetworkBehaviour
         Debug.Log($"Waiting for bird changed to {newValue}");
     }
 
+    void UpdateUIforCurrentPlayer()
+    {
+        if (currentPlayer.Value == 1)
+        {
+            playerUI1.SetActive(true);
+            playerUI2.SetActive(false);
+        }
+        if (currentPlayer.Value == 2)
+        {
+            playerUI1.SetActive(false);
+            playerUI2.SetActive(true);
+        }
+    }
 }
