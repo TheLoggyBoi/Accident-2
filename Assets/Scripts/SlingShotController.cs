@@ -11,7 +11,7 @@ public class SlingShotController : NetworkBehaviour
     public LineRenderer rightBand;
     public LineRenderer trajectoryLine;
 
-[Header("Launch Settings")]
+    [Header("Launch Settings")]
     public float forceMultiplier = 100f;
     public float maxStretch = 5f;
     public float minLaunch = 0.5f;
@@ -81,34 +81,34 @@ public class SlingShotController : NetworkBehaviour
             HandleInput();
         }
     }
-    
+
 
     bool CanHandleInput()
     {
         // Simplified for debugging - let's see if the basic mechanics work first
         Debug.Log($"CanHandleInput check for Player {playerNumber}: NetworkSpawned={isNetworkSpawned}, Active={isActive}");
-        
+
         // Basic checks first
         if (!isActive)
         {
             Debug.Log($"Slingshot {playerNumber} is not active");
             return false;
         }
-        
+
         // Ensure this slingshot has been network spawned
         if (!isNetworkSpawned)
         {
             Debug.Log($"Slingshot {playerNumber} is not network spawned");
             return false;
         }
-        
+
         // Check if TurnManager exists
         if (TurnManager.Instance == null)
         {
             Debug.Log($"TurnManager.Instance is null for Player {playerNumber}");
             return false;
         }
-        
+
         if (!TurnManager.Instance.IsSpawned)
         {
             Debug.Log($"TurnManager not spawned for Player {playerNumber}");
@@ -125,12 +125,12 @@ public class SlingShotController : NetworkBehaviour
         // Get current player from turn manager
         int currentPlayer = TurnManager.Instance.GetCurrentPlayer();
         int myPlayerNumber = TurnManager.Instance.GetMyPlayerNumber();
-        
+
         // Simplified logic: just check if it's my turn
         bool isMyTurn = (currentPlayer == playerNumber && myPlayerNumber == playerNumber);
-        
+
         Debug.Log($"Turn check for Player {playerNumber}: Current={currentPlayer}, My={myPlayerNumber}, IsMyTurn={isMyTurn}");
-        
+
         return isMyTurn;
     }
 
@@ -139,17 +139,17 @@ public class SlingShotController : NetworkBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log($"Mouse clicked! Player {playerNumber}, Stage: {currentStage}");
-            
+
             if (currentStage == AimingStage.None)
             {
                 Camera currentCamera = Camera.main;
                 if (currentCamera == null) currentCamera = FindFirstObjectByType<Camera>();
-                
+
                 if (currentCamera != null)
                 {
                     Ray ray = currentCamera.ScreenPointToRay(Input.mousePosition);
                     Debug.Log($"Casting ray from camera for Player {playerNumber}. Camera: {currentCamera.name}");
-                    
+
                     if (Physics.Raycast(ray, out RaycastHit hit))
                     {
                         Debug.Log($"Raycast hit: {hit.collider.gameObject.name}, Expected root: {gameObject.name}");
@@ -230,9 +230,9 @@ public class SlingShotController : NetworkBehaviour
     {
         Camera currentCamera = Camera.main;
         if (currentCamera == null) currentCamera = FindFirstObjectByType<Camera>();
-        
+
         if (currentCamera == null) return;
-        
+
         Ray mouseRay = currentCamera.ScreenPointToRay(Input.mousePosition);
         Plane dragPlane = new Plane(Vector3.up, startPos);
         Vector3 worldMouse = startPos;
