@@ -487,7 +487,7 @@ public class TurnManager : NetworkBehaviour
             playerUI1.SetActive(true);
             playerUI2.SetActive(false);
         }
-        else
+        if (currentPlayer.Value == 2)
         {
             playerUI1.SetActive(false);
             playerUI2.SetActive(true);
