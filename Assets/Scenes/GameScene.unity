@@ -1169,7 +1169,10 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1011332702
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1038255416532835641, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+    - {fileID: -1990945506469053721, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+    - {fileID: -2857446929959341181, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2396,7 +2399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360273366410308814, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.3
+      value: -14.94
       objectReference: {fileID: 0}
     - target: {fileID: 2360273366410308814, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2442,7 +2445,10 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1011332702
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1038255416532835641, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+    - {fileID: -1990945506469053721, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+    - {fileID: -2857446929959341181, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4737,7 +4743,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 172.17.162.175
+    Address: 0.0.0.0
     Port: 7777
     ServerListenAddress: 0.0.0.0
   DebugSimulator:
@@ -5433,7 +5439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1165032700344563670, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 218.23161
+      value: 218.7
       objectReference: {fileID: 0}
     - target: {fileID: 1165032700344563670, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: m_LocalPosition.y
