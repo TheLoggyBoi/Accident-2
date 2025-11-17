@@ -32,19 +32,33 @@ public class BirdChoice : MonoBehaviour
             return;
         }
 
+        Vector3 newPosition;
+
         if (useCoordinates)
         {
-            objectToTeleport.transform.position = targetPosition;
+            newPosition = targetPosition;
         }
         else if (targetLocation != null)
         {
-            objectToTeleport.transform.position = targetLocation.position;
+            newPosition = targetLocation.position;
         }
         else
         {
             Debug.LogWarning("No target location or coordinates set!");
+            return;
         }
 
-        Debug.Log($"Teleported {objectToTeleport.name} to {objectToTeleport.transform.position}");
+        // Teleport the object
+        objectToTeleport.transform.position = newPosition;
+
+        // Update any stored original positions in other scripts
+        SlingShotController slingshot = objectToTeleport.GetComponent<SlingShotController>();
+        if (slingshot != null)
+        {
+            // Reset the bird to update its internal start position
+            slingshot.ResetBird();
+        }
+
+        Debug.Log($"Teleported {objectToTeleport.name} to {newPosition}");
     }
 }

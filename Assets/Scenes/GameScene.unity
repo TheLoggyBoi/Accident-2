@@ -1850,7 +1850,7 @@ GameObject:
   - component: {fileID: 593632167}
   - component: {fileID: 593632166}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Ocean
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
