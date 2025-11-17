@@ -4215,7 +4215,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 759451954}
         m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: SetParent
+        m_MethodName: set_parent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1702808631}
@@ -4929,11 +4929,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  leftPost: {fileID: 1177435155}
-  rightPost: {fileID: 2005372164}
-  leftBand: {fileID: 1365528464}
-  rightBand: {fileID: 577700898}
-  trajectoryLine: {fileID: 1610159238}
+  leftPost: {fileID: 4848571643172740122}
+  rightPost: {fileID: 4619893720400446616}
+  leftBand: {fileID: 3211782243438715745}
+  rightBand: {fileID: 8441379704965697192}
+  trajectoryLine: {fileID: 1932552322072874688}
   forceMultiplier: 35
   maxStretch: 12
   minLaunch: 0.5
