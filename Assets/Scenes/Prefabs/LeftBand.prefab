@@ -40,7 +40,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2672451506601246230}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -79,8 +79,8 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: -49.802643, y: 20.964005, z: -24.732529}
-  - {x: -93.48045, y: 127.623474, z: -56.337646}
-  - {x: -137.15826, y: 235.28293, z: -87.942764}
+  - {x: -97.75792, y: 127.623474, z: -47.640835}
+  - {x: -145.7132, y: 235.28293, z: -70.54914}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
