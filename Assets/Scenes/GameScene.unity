@@ -1535,6 +1535,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2014186608}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2014186611}
   m_SourcePrefab: {fileID: 100100000, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
 --- !u!1 &535822875 stripped
 GameObject:
@@ -5000,6 +5003,23 @@ MonoBehaviour:
   trajectoryPoints: 30
   timeStep: 0.1
   playerNumber: 1
+--- !u!114 &2014186611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014186606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95a7be4111c0dc429c033b97d8e6607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToTeleport: {fileID: 2014186606}
+  targetLocation: {fileID: 1702808631}
+  useCoordinates: 0
+  targetPosition: {x: 0, y: 0, z: 0}
+  teleportButton: {fileID: 1720455590}
 --- !u!1001 &2037745016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5205,6 +5225,10 @@ PrefabInstance:
     - target: {fileID: -1873345581434341466, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 4190845283
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478188528014042562, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3779077011369172745, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5527,6 +5551,10 @@ PrefabInstance:
       propertyPath: turnIndicator
       value: 
       objectReference: {fileID: 85509527}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: turnSwitchDelay
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: player1Slingshot
       value: 
