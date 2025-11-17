@@ -1102,9 +1102,29 @@ PrefabInstance:
       value: -0.14083384
       objectReference: {fileID: 0}
     - target: {fileID: 746989061581220878, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+      propertyPath: leftBand
+      value: 
+      objectReference: {fileID: 1365528464}
+    - target: {fileID: 746989061581220878, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+      propertyPath: leftPost
+      value: 
+      objectReference: {fileID: 1177435155}
+    - target: {fileID: 746989061581220878, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+      propertyPath: rightBand
+      value: 
+      objectReference: {fileID: 577700898}
+    - target: {fileID: 746989061581220878, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+      propertyPath: rightPost
+      value: 
+      objectReference: {fileID: 2005372164}
+    - target: {fileID: 746989061581220878, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: playerNumber
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 746989061581220878, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+      propertyPath: trajectoryLine
+      value: 
+      objectReference: {fileID: 1610159238}
     - target: {fileID: 2360273366410308814, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.7588997
