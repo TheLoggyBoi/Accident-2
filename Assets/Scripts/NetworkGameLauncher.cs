@@ -475,7 +475,7 @@ public class NetworkGameLauncher : NetworkBehaviour
         }
     }
 
-    void OnDestroy()
+    void OverrideOnDestroy()
     {
         // Cleanup event subscriptions with null checks
         if (NetworkManager.Singleton != null)
