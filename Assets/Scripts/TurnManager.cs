@@ -37,10 +37,6 @@ public class TurnManager : NetworkBehaviour
     public GameObject playerUI1;
     public GameObject playerUI2;
 
-    //buttons
-    public GameObject playerUi1;
-    public GameObject playerUi2;
-
     public static TurnManager Instance { get; private set; }
 
     void Awake()
@@ -140,6 +136,7 @@ public class TurnManager : NetworkBehaviour
 
         SetPlayerTurn();
         UpdateUI();
+        UpdateUIforCurrentPlayer();
     }
 
     public void StartGameFromLauncher()
@@ -463,6 +460,7 @@ public class TurnManager : NetworkBehaviour
         Debug.Log($"Player turn changed from {previousValue} to {newValue}");
         SetPlayerTurn();
         UpdateUI();
+        UpdateUIforCurrentPlayer();
     }
 
     void OnGameActiveChanged(bool previousValue, bool newValue)
@@ -475,7 +473,7 @@ public class TurnManager : NetworkBehaviour
         {
             SetPlayerTurn();
             SetCamerasForCurrentPlayer();
-            UpdateUIforCurrentPlayer();
+
         }
         UpdateUI();
     }
