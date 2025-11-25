@@ -37,6 +37,10 @@ public class TurnManager : NetworkBehaviour
     public GameObject playerUI1;
     public GameObject playerUI2;
 
+    //buttons
+    public GameObject playerUi1;
+    public GameObject playerUi2;
+
     public static TurnManager Instance { get; private set; }
 
     void Awake()
@@ -471,6 +475,7 @@ public class TurnManager : NetworkBehaviour
         {
             SetPlayerTurn();
             SetCamerasForCurrentPlayer();
+            UpdateUIforCurrentPlayer();
         }
         UpdateUI();
     }
