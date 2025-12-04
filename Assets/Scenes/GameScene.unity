@@ -281,7 +281,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1304353792}
+      - m_Target: {fileID: 1985596314}
         m_TargetAssemblyTypeName: BirdChoice, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1304353792}
+      - m_Target: {fileID: 396602222}
         m_TargetAssemblyTypeName: BirdChoice, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -1347,7 +1347,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1304353792}
+      - m_Target: {fileID: 795399634}
         m_TargetAssemblyTypeName: BirdChoice, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -2834,7 +2834,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1304353792}
+      - m_Target: {fileID: 1980105516}
         m_TargetAssemblyTypeName: BirdChoice, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -3763,7 +3763,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1304353792}
+      - m_Target: {fileID: 2124089548}
         m_TargetAssemblyTypeName: BirdChoice, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -6228,7 +6228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1304353792}
+      - m_Target: {fileID: 611295485}
         m_TargetAssemblyTypeName: BirdChoice, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -7211,7 +7211,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1304353792}
+      - m_Target: {fileID: 1523612917}
         m_TargetAssemblyTypeName: BirdChoice, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -8243,7 +8243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6006190711214462498, guid: ee81cf32ae02bd642bb9cdbd152db14b, type: 3}
       propertyPath: ConnectionData.Address
-      value: 172.17.162.174
+      value: 0.0.0.0
       objectReference: {fileID: 0}
     - target: {fileID: 6006190711214462498, guid: ee81cf32ae02bd642bb9cdbd152db14b, type: 3}
       propertyPath: ConnectionData.ServerListenAddress
