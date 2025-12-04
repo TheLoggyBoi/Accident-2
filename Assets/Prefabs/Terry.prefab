@@ -70,6 +70,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       insertIndex: -1
+      addedObject: {fileID: -7104029388845508149}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
+      insertIndex: -1
       addedObject: {fileID: -9130744120339929792}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       insertIndex: -1
@@ -79,22 +82,41 @@ PrefabInstance:
       addedObject: {fileID: -4432915355482858383}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -7104029388845508149}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3157834741247939752}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1163697812318004654}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8197945681231491401}
   m_SourcePrefab: {fileID: 100100000, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
 --- !u!1 &5035800391494378835 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
   m_PrefabInstance: {fileID: 5270240808153815042}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7104029388845508149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035800391494378835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3993948781
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!114 &-9130744120339929792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f2218dfb734e24db89b267a50e5392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   leftPost: {fileID: 9029277436082938675, guid: 6e6b7aad7288a164a9409375eae30ad6, type: 3}
   rightPost: {fileID: 1938905081640385541, guid: 872f947c3119cc3419d6d0b7475277f4, type: 3}
   leftBand: {fileID: 5071685587676804607, guid: 88c0e0e36e58a214f9beb533d4c1869c, type: 3}
@@ -117,8 +140,7 @@ MonoBehaviour:
   minLaunch: 0.5
   trajectoryPoints: 30
   timeStep: 0.1
-  dragAudioSource: {fileID: 283884916778817471, guid: 5ff7c15bdf93b9642816d0b955aad593, type: 3}
-  releaseAudioSource: {fileID: 3720618721429042161, guid: affa1d39cc065ec4d959e13b90f800fe, type: 3}
+  playerNumber: 1
 --- !u!54 &3925626477712312983
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -169,31 +191,6 @@ CapsuleCollider:
   m_Height: 4.1752243
   m_Direction: 1
   m_Center: {x: 0.12041601, y: 1.4870962, z: -0.043790184}
---- !u!114 &-7104029388845508149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5035800391494378835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3993948781
-  InScenePlacedSourceGlobalObjectIdHash: 0
-  DeferredDespawnTick: 0
-  Ownership: 1
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 0
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
-  SyncOwnerTransformWhenParented: 1
-  AllowOwnerToParent: 0
 --- !u!114 &3157834741247939752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,22 +254,3 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 1
   AutoSetKinematicOnDespawn: 1
---- !u!114 &8197945681231491401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5035800391494378835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8905698ece7ddec4abfd1f29b3c7104e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayName: Terry
-  icon: {fileID: 5978898516894778253, guid: 17c558ddb31742c42894aa507b18c308, type: 3}
-  speed: 5
-  weight: 5
-  power: 5
-  abilityName: No Ability
-  description: 

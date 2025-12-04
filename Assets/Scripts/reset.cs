@@ -1,15 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class BirdChoice : MonoBehaviour
+public class reset : MonoBehaviour
 {
     public Transform bird;
-    public Vector3 singshot;
+    public Vector3 resetpoint;
     public void TeleportObject()
     {
         if (bird != null)
         {
-            bird.position = singshot;
+            bird.position = resetpoint;
         }
         else
         {
