@@ -13,7 +13,7 @@ public class TpBirdSlingShot : NetworkBehaviour
     [Header("Collision Settings")]
     public LayerMask groundLayer = -1;
     public LayerMask boardLayer = -1;
-
+    
     [Header("Effects")]
     public ParticleSystem hitEffect;
     public AudioClip hitSound;
@@ -30,15 +30,13 @@ public class TpBirdSlingShot : NetworkBehaviour
     private NetworkVariable<Vector3> networkVelocity = new NetworkVariable<Vector3>();
     private NetworkVariable<bool> isLaunched = new NetworkVariable<bool>(false);
 
-    //bird reset
-    public GameObject bird;
-    public GameObject resetpoint;
+    public bool onboardhit;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
-
+        
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
     }
@@ -54,7 +52,7 @@ public class TpBirdSlingShot : NetworkBehaviour
         networkPosition.OnValueChanged += OnPositionChanged;
         networkVelocity.OnValueChanged += OnVelocityChanged;
         isLaunched.OnValueChanged += OnLaunchedStateChanged;
-
+        
         // Initialize position
         if (IsOwner)
         {
@@ -94,10 +92,10 @@ public class TpBirdSlingShot : NetworkBehaviour
         if (!IsOwner || hasLaunched) return;
 
         Debug.Log($"Launching bird with force: {force}");
-
+        
         hasLaunched = true;
         hasHitBoard = false;
-
+        
         if (rb != null)
         {
             rb.isKinematic = false;
@@ -138,13 +136,13 @@ public class TpBirdSlingShot : NetworkBehaviour
     public void ResetBird(Vector3 resetPosition, Quaternion resetRotation)
     {
         Debug.Log($"Resetting bird for Player {ownerPlayerNumber}");
-
+        
         hasLaunched = false;
         hasHitBoard = false;
-
+        
         transform.position = resetPosition;
         transform.rotation = resetRotation;
-
+        
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
@@ -171,7 +169,7 @@ public class TpBirdSlingShot : NetworkBehaviour
             hasHitBoard = false;
             transform.position = resetPosition;
             transform.rotation = resetRotation;
-
+            
             if (rb != null)
             {
                 rb.linearVelocity = Vector3.zero;
@@ -192,7 +190,7 @@ public class TpBirdSlingShot : NetworkBehaviour
                 networkVelocity.Value = rb.linearVelocity;
             }
         }
-
+        
         // Check if bird is out of bounds
         if (hasLaunched && transform.position.y < -50f)
         {
@@ -240,7 +238,7 @@ public class TpBirdSlingShot : NetworkBehaviour
     void OnBoardHit(TicTacToeSquare square)
     {
         Debug.Log($"Player {ownerPlayerNumber} bird hit the tic-tac-toe board!");
-
+        
         if (TurnManager.Instance != null)
         {
             int currentPlayer = TurnManager.Instance.GetCurrentPlayer();
@@ -250,7 +248,7 @@ public class TpBirdSlingShot : NetworkBehaviour
                 int squareIndex = square.GetIndex();
                 board.RequestClaimSquareServerRpc(squareIndex, currentPlayer);
             }
-
+            
             if (TurnManager.Instance.IsSpawned)
             {
                 TurnManager.Instance.OnBirdHitBoardServerRpc(NetworkManager.Singleton.LocalClientId);
@@ -265,7 +263,7 @@ public class TpBirdSlingShot : NetworkBehaviour
         if (!hasHitBoard)
         {
             Debug.Log($"Player {ownerPlayerNumber} bird hit the ground without hitting the board!");
-
+            
             if (TurnManager.Instance != null && TurnManager.Instance.IsSpawned)
             {
                 TurnManager.Instance.OnBirdHitGroundServerRpc(NetworkManager.Singleton.LocalClientId);
@@ -278,7 +276,7 @@ public class TpBirdSlingShot : NetworkBehaviour
     void OnBirdOutOfBounds()
     {
         Debug.Log($"Player {ownerPlayerNumber} bird went out of bounds!");
-
+        
         if (TurnManager.Instance != null && TurnManager.Instance.IsSpawned)
         {
             TurnManager.Instance.OnBirdHitGroundServerRpc(NetworkManager.Singleton.LocalClientId);
@@ -327,6 +325,7 @@ public class TpBirdSlingShot : NetworkBehaviour
             rb.isKinematic = false;
         }
     }
+
 
     // Public getters
     public bool HasLaunched() => hasLaunched;
