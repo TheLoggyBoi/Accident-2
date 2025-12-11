@@ -13,7 +13,7 @@ public class NetworkedBird : NetworkBehaviour
     [Header("Collision Settings")]
     public LayerMask groundLayer = -1;
     public LayerMask boardLayer = -1;
-    
+
     [Header("Effects")]
     public ParticleSystem hitEffect;
     public AudioClip hitSound;
@@ -30,11 +30,15 @@ public class NetworkedBird : NetworkBehaviour
     private NetworkVariable<Vector3> networkVelocity = new NetworkVariable<Vector3>();
     private NetworkVariable<bool> isLaunched = new NetworkVariable<bool>(false);
 
+    //bird reset
+    public GameObject bird;
+    public GameObject resetpoint;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
-        
+
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
     }
@@ -50,7 +54,7 @@ public class NetworkedBird : NetworkBehaviour
         networkPosition.OnValueChanged += OnPositionChanged;
         networkVelocity.OnValueChanged += OnVelocityChanged;
         isLaunched.OnValueChanged += OnLaunchedStateChanged;
-        
+
         // Initialize position
         if (IsOwner)
         {
@@ -90,10 +94,10 @@ public class NetworkedBird : NetworkBehaviour
         if (!IsOwner || hasLaunched) return;
 
         Debug.Log($"Launching bird with force: {force}");
-        
+
         hasLaunched = true;
         hasHitBoard = false;
-        
+
         if (rb != null)
         {
             rb.isKinematic = false;
@@ -134,13 +138,13 @@ public class NetworkedBird : NetworkBehaviour
     public void ResetBird(Vector3 resetPosition, Quaternion resetRotation)
     {
         Debug.Log($"Resetting bird for Player {ownerPlayerNumber}");
-        
+
         hasLaunched = false;
         hasHitBoard = false;
-        
+
         transform.position = resetPosition;
         transform.rotation = resetRotation;
-        
+
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
@@ -167,7 +171,7 @@ public class NetworkedBird : NetworkBehaviour
             hasHitBoard = false;
             transform.position = resetPosition;
             transform.rotation = resetRotation;
-            
+
             if (rb != null)
             {
                 rb.linearVelocity = Vector3.zero;
@@ -188,7 +192,7 @@ public class NetworkedBird : NetworkBehaviour
                 networkVelocity.Value = rb.linearVelocity;
             }
         }
-        
+
         // Check if bird is out of bounds
         if (hasLaunched && transform.position.y < -50f)
         {
@@ -236,7 +240,7 @@ public class NetworkedBird : NetworkBehaviour
     void OnBoardHit(TicTacToeSquare square)
     {
         Debug.Log($"Player {ownerPlayerNumber} bird hit the tic-tac-toe board!");
-        
+
         if (TurnManager.Instance != null)
         {
             int currentPlayer = TurnManager.Instance.GetCurrentPlayer();
@@ -246,7 +250,7 @@ public class NetworkedBird : NetworkBehaviour
                 int squareIndex = square.GetIndex();
                 board.RequestClaimSquareServerRpc(squareIndex, currentPlayer);
             }
-            
+
             if (TurnManager.Instance.IsSpawned)
             {
                 TurnManager.Instance.OnBirdHitBoardServerRpc(NetworkManager.Singleton.LocalClientId);
@@ -261,7 +265,7 @@ public class NetworkedBird : NetworkBehaviour
         if (!hasHitBoard)
         {
             Debug.Log($"Player {ownerPlayerNumber} bird hit the ground without hitting the board!");
-            
+
             if (TurnManager.Instance != null && TurnManager.Instance.IsSpawned)
             {
                 TurnManager.Instance.OnBirdHitGroundServerRpc(NetworkManager.Singleton.LocalClientId);
@@ -274,7 +278,7 @@ public class NetworkedBird : NetworkBehaviour
     void OnBirdOutOfBounds()
     {
         Debug.Log($"Player {ownerPlayerNumber} bird went out of bounds!");
-        
+
         if (TurnManager.Instance != null && TurnManager.Instance.IsSpawned)
         {
             TurnManager.Instance.OnBirdHitGroundServerRpc(NetworkManager.Singleton.LocalClientId);
@@ -321,6 +325,14 @@ public class NetworkedBird : NetworkBehaviour
         if (newValue && rb != null)
         {
             rb.isKinematic = false;
+        }
+    }
+
+    private void Resetbird()
+    {
+        if (hasHitBoard == true)
+        {
+            bird = resetpoint;
         }
     }
 
