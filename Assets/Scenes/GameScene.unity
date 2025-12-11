@@ -2093,6 +2093,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2014186608}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2014186611}
   m_SourcePrefab: {fileID: 100100000, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
 --- !u!1 &535822875 stripped
 GameObject:
@@ -3319,6 +3322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1615648099}
   - {fileID: 2083279148}
   - {fileID: 846723840}
   - {fileID: 759451954}
@@ -5816,6 +5820,37 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 1932552322899600244, guid: 0b3d849ebcece6d48bd968a21a823cfd, type: 3}
   m_PrefabInstance: {fileID: 7355786199604684332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1615648098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615648099}
+  m_Layer: 0
+  m_Name: resetpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1615648099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615648098}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -310.18, y: -2.899994, z: -78.4}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 735051001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1630641787
 GameObject:
   m_ObjectHideFlags: 0
@@ -7226,6 +7261,21 @@ MonoBehaviour:
   trajectoryPoints: 30
   timeStep: 0.1
   playerNumber: 1
+--- !u!114 &2014186611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014186606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f92ebbe557400042a7df3f8d0160b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bird: {fileID: 759451954}
+  resetpoint: {fileID: 1615648099}
+  onboardhit: 1
 --- !u!1001 &2037745016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8581,7 +8631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6006190711214462498, guid: ee81cf32ae02bd642bb9cdbd152db14b, type: 3}
       propertyPath: ConnectionData.Address
-      value: 172.17.162.174
+      value: 0.0.0.0
       objectReference: {fileID: 0}
     - target: {fileID: 6006190711214462498, guid: ee81cf32ae02bd642bb9cdbd152db14b, type: 3}
       propertyPath: ConnectionData.ServerListenAddress
