@@ -1546,6 +1546,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.14083384
       objectReference: {fileID: 0}
+    - target: {fileID: -9134574889179400721, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 746989061581220878, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: leftBand
       value: 
@@ -2026,7 +2030,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2269,6 +2273,10 @@ PrefabInstance:
       propertyPath: trajectoryLine
       value: 
       objectReference: {fileID: 1610159238}
+    - target: {fileID: 7154976206275019738, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2542,7 +2550,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3343,6 +3351,10 @@ PrefabInstance:
     - target: {fileID: -9134574889179400721, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_Center.z
       value: -0.14083384
+      objectReference: {fileID: 0}
+    - target: {fileID: -9134574889179400721, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 746989061581220878, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: leftBand
@@ -4364,7 +4376,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -6883,7 +6895,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -7384,6 +7396,10 @@ PrefabInstance:
       propertyPath: trajectoryLine
       value: 
       objectReference: {fileID: 1932552322072874688}
+    - target: {fileID: 7154976206275019738, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8243,7 +8259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6006190711214462498, guid: ee81cf32ae02bd642bb9cdbd152db14b, type: 3}
       propertyPath: ConnectionData.Address
-      value: 0.0.0.0
+      value: 172.17.162.174
       objectReference: {fileID: 0}
     - target: {fileID: 6006190711214462498, guid: ee81cf32ae02bd642bb9cdbd152db14b, type: 3}
       propertyPath: ConnectionData.ServerListenAddress
