@@ -4922,8 +4922,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1323273587}
-  - component: {fileID: 1323273586}
   - component: {fileID: 1323273585}
+  - component: {fileID: 1323273586}
   m_Layer: 0
   m_Name: tpbirdsling
   m_TagString: Untagged
