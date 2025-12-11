@@ -2,7 +2,7 @@
 using UnityEngine;
 using Unity.Netcode;
 
-public class NetworkedBird : NetworkBehaviour
+public class TpBirdSlingShot : NetworkBehaviour
 {
     [Header("Bird Physics")]
     public float mass = 1f;
@@ -325,14 +325,6 @@ public class NetworkedBird : NetworkBehaviour
         if (newValue && rb != null)
         {
             rb.isKinematic = false;
-        }
-    }
-
-    private void Resetbird()
-    {
-        if (hasHitBoard == true)
-        {
-            bird = resetpoint;
         }
     }
 
