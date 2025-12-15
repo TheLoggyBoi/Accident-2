@@ -2627,9 +2627,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 604072647}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 604072646}
   m_SourcePrefab: {fileID: 100100000, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
 --- !u!4 &604072644 stripped
 Transform:
@@ -2641,20 +2638,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
   m_PrefabInstance: {fileID: 604072643}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &604072646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604072645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f95a7be4111c0dc429c033b97d8e6607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bird: {fileID: 0}
-  singshot: {x: 0, y: 0, z: 0}
 --- !u!136 &604072647
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2728,7 +2711,7 @@ MonoBehaviour:
   minLaunch: 0.5
   trajectoryPoints: 30
   timeStep: 0.1
-  playerNumber: 1
+  playerNumber: 2
 --- !u!114 &604072650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3611,9 +3594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
-    - {fileID: -2857446929959341181, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
-    - {fileID: -1038255416532835641, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
-    - {fileID: -1990945506469053721, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8758,7 +8739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6006190711214462498, guid: ee81cf32ae02bd642bb9cdbd152db14b, type: 3}
       propertyPath: ConnectionData.Address
-      value: 172.17.162.174
+      value: 0.0.0.0
       objectReference: {fileID: 0}
     - target: {fileID: 6006190711214462498, guid: ee81cf32ae02bd642bb9cdbd152db14b, type: 3}
       propertyPath: ConnectionData.ServerListenAddress
