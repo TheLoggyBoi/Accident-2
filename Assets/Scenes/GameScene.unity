@@ -1696,15 +1696,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2360273366410308814, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 127.72327
+      value: 118
       objectReference: {fileID: 0}
     - target: {fileID: 2360273366410308814, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.562927
+      value: -3.17
       objectReference: {fileID: 0}
     - target: {fileID: 2360273366410308814, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -77.71
+      value: -78.91
       objectReference: {fileID: 0}
     - target: {fileID: 2360273366410308814, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1737,6 +1737,10 @@ PrefabInstance:
     - target: {fileID: 3137514375460681332, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_Name
       value: Darcy2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3137514375460681332, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3137514375460681332, guid: b8e3f22b2012adc4eac6fa0e618fc893, type: 3}
       propertyPath: m_TagString
@@ -2319,15 +2323,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3779077011369172745, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 127.70999
+      value: 116.2
       objectReference: {fileID: 0}
     - target: {fileID: 3779077011369172745, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.949997
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 3779077011369172745, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -91.24
+      value: -79.83
       objectReference: {fileID: 0}
     - target: {fileID: 3779077011369172745, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2360,6 +2364,10 @@ PrefabInstance:
     - target: {fileID: 4556000325989909939, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: m_Name
       value: Detonator2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556000325989909939, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5909129373237998073, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: leftBand
@@ -2529,15 +2537,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 113
+      value: 117.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.929993
+      value: -3.14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -71.57
+      value: -79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4483,15 +4491,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1456a9990d88aee40ac80ac5067199e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 128.03
+      value: 118.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1456a9990d88aee40ac80ac5067199e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.470001
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1456a9990d88aee40ac80ac5067199e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -83.03
+      value: -78.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1456a9990d88aee40ac80ac5067199e3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4524,6 +4532,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1456a9990d88aee40ac80ac5067199e3, type: 3}
       propertyPath: m_Name
       value: TicTacToeBirds2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1456a9990d88aee40ac80ac5067199e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1456a9990d88aee40ac80ac5067199e3, type: 3}
       propertyPath: m_TagString
