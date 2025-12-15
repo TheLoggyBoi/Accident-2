@@ -916,7 +916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -140.49963, y: 32}
+  m_AnchoredPosition: {x: -235.5, y: -10.8}
   m_SizeDelta: {x: 153.45288, y: 246.12079}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420118933
@@ -952,7 +952,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Dade \nShilo \nLogan\n\n\nDade \nLogan\n\n\nDade \nShilo\n\n\nShilo\n\n\n"
+  m_Text: "Dade  \nLogan\n\n\nDade \nLogan\n\n\nDade \nKennedy"
 --- !u!222 &1420118934
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1034,6 +1034,7 @@ GameObject:
   - component: {fileID: 1837437356}
   - component: {fileID: 1837437355}
   - component: {fileID: 1837437354}
+  - component: {fileID: 1837437357}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -1104,7 +1105,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1837437355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1837437357}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: MenuScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1837437355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,6 +1156,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837437352}
   m_CullTransparentMesh: 1
+--- !u!114 &1837437357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837437352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e882a8f41a64ed408cff87874e02e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 0}
+  QuitButton: {fileID: 0}
 --- !u!1 &1902591716
 GameObject:
   m_ObjectHideFlags: 0
