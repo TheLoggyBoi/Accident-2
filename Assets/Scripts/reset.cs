@@ -4,13 +4,10 @@ public class reset : MonoBehaviour
 {
     public Transform bird;
     public Transform resetpoint;
-    public bool onboardhit;
+    public TpBirdSlingShot TpBirdSlingShot;
 
     void Resetbird()
     {
-        if (onboardhit == true)
-        {
-            bird = resetpoint;
-        }
+        
     }
 }

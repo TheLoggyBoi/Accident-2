@@ -30,7 +30,7 @@ public class TpBirdSlingShot : NetworkBehaviour
     private NetworkVariable<Vector3> networkVelocity = new NetworkVariable<Vector3>();
     private NetworkVariable<bool> isLaunched = new NetworkVariable<bool>(false);
 
-    public bool onboardhit;
+    
 
     void Awake()
     {

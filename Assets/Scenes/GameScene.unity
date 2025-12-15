@@ -4968,14 +4968,13 @@ MonoBehaviour:
   useGravity: 1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
   boardLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   hitEffect: {fileID: 0}
   hitSound: {fileID: 0}
   launchSound: {fileID: 0}
-  onboardhit: 0
 --- !u!4 &1323273587
 Transform:
   m_ObjectHideFlags: 0
@@ -7376,14 +7375,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014186606}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f92ebbe557400042a7df3f8d0160b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bird: {fileID: 759451954}
   resetpoint: {fileID: 1615648099}
-  onboardhit: 1
+  TpBirdSlingShot: {fileID: 0}
 --- !u!1001 &2037745016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8872,6 +8871,26 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1292135248
       objectReference: {fileID: 0}
+    - target: {fileID: 2469093360120021936, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527305986776047812, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850606344062509107, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339720520705720901, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700216156116545375, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4008570988636465380, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 3863088788
@@ -8880,6 +8899,10 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1292135248
       objectReference: {fileID: 0}
+    - target: {fileID: 4109605112613686920, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4666184527941854765, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 2196952060
@@ -8887,6 +8910,10 @@ PrefabInstance:
     - target: {fileID: 4666184527941854765, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1292135248
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064293897140973521, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5109700756402356889, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
       propertyPath: GlobalObjectIdHash
@@ -8904,9 +8931,25 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 1292135248
       objectReference: {fileID: 0}
+    - target: {fileID: 5720346456979903426, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843960783489184196, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6220844389726469873, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
       propertyPath: m_Name
       value: TicTacToeBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220844389726469873, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448260666551764855, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6710136600951579723, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
       propertyPath: m_LocalPosition.x
