@@ -37,6 +37,12 @@ public class TurnManager : NetworkBehaviour
     public GameObject playerUI1;
     public GameObject playerUI2;
 
+    //bird reset
+    public GameObject Player1bird;
+    public GameObject Player2bird;
+    public GameObject resetpoint1;
+    public GameObject resetpoint2;
+
     public static TurnManager Instance { get; private set; }
 
     void Awake()
@@ -496,4 +502,16 @@ public class TurnManager : NetworkBehaviour
             playerUI2.SetActive(true);
         }
     }
+    void resetforplayer() 
+    {
+        if (currentPlayer.Value == 1)
+        {
+            Player2bird = resetpoint2;
+        }
+        if (currentPlayer.Value == 2) 
+        { 
+          Player1bird = resetpoint1;
+        }
+    }
+
 }

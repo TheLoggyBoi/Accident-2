@@ -3313,7 +3313,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1615648099}
   - {fileID: 2083279148}
   - {fileID: 846723840}
   - {fileID: 759451954}
@@ -3411,6 +3410,7 @@ Transform:
   - {fileID: 1296618362}
   - {fileID: 176742743}
   - {fileID: 593632169}
+  - {fileID: 1615648099}
   - {fileID: 735051001}
   - {fileID: 2072338385}
   m_Father: {fileID: 0}
@@ -5572,6 +5572,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c52597eac2936eb4b8eec88f1b830e40, type: 3}
   m_PrefabInstance: {fileID: 281399575}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1491685453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491685454}
+  m_Layer: 0
+  m_Name: resetpoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1491685454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491685453}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 293.59, y: 249.11, z: -78.92}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1523612915
 GameObject:
   m_ObjectHideFlags: 0
@@ -5907,7 +5938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615648099}
   m_Layer: 0
-  m_Name: resetpoint
+  m_Name: resetpoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5926,7 +5957,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 735051001}
+  m_Father: {fileID: 801751145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1630641787
 GameObject:
@@ -8571,6 +8602,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1004119188}
     - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: Player1bird
+      value: 
+      objectReference: {fileID: 735051000}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: Player2bird
+      value: 
+      objectReference: {fileID: 2072338384}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: resetpoint1
+      value: 
+      objectReference: {fileID: 1615648098}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: resetpoint2
+      value: 
+      objectReference: {fileID: 1491685453}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 292075605}
@@ -9124,3 +9171,4 @@ SceneRoots:
   - {fileID: 149610492}
   - {fileID: 898201885}
   - {fileID: 1323273587}
+  - {fileID: 1491685454}
