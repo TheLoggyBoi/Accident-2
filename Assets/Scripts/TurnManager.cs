@@ -500,34 +500,42 @@ public class TurnManager : NetworkBehaviour
         if (blackbird1.activeInHierarchy)
         {
             player1Slingshot = blackbird1controller;
+            Debug.Log($"black bird check1");
         }
         if (blackbird2.activeInHierarchy)
         {
             player2Slingshot = blackbird2controller;
+            Debug.Log($"black bird check2");
         }
         if (redbird1.activeInHierarchy)
         {
             player1Slingshot = redbird1controller;
+            Debug.Log($"red bird check1");
         }
         if (redbird2.activeInHierarchy)
         {
             player2Slingshot = redbird2controller;
+            Debug.Log($"red bird check2");
         }
         if (whitebird1.activeInHierarchy)
         {
             player1Slingshot = whitebird1controller;
+            Debug.Log($"white bird check1");
         }
         if (whitebird2.activeInHierarchy)
         {
             player2Slingshot = whitebird2controller;
+            Debug.Log($"white bird check2");
         }
         if (tictacandtoe1.activeInHierarchy)
         {
             player1Slingshot = tictacandtoe1controller;
+            Debug.Log($"tictacandtoe bird check1");
         }
         if (tictacandtoe2.activeInHierarchy)
         {
             player2Slingshot = tictacandtoe2controller;
+            Debug.Log($"tictacandtoe bird check2");
         }
     }
 
