@@ -6833,6 +6833,30 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: redbird1
+      value: 
+      objectReference: {fileID: 1724702830}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: redbird2
+      value: 
+      objectReference: {fileID: 1970768107}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: blackbird1
+      value: 
+      objectReference: {fileID: 2019398915}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: blackbird2
+      value: 
+      objectReference: {fileID: 1036897995}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: whitebird1
+      value: 
+      objectReference: {fileID: 925036779}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: whitebird2
+      value: 
+      objectReference: {fileID: 1994540509}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 292075605}
@@ -6849,6 +6873,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 717299975}
     - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: tictacandtoe1
+      value: 
+      objectReference: {fileID: 1591630286}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: tictacandtoe2
+      value: 
+      objectReference: {fileID: 11352580}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: turnIndicator
       value: 
       objectReference: {fileID: 85509527}
@@ -6860,6 +6892,38 @@ PrefabInstance:
       propertyPath: player2Slingshot
       value: 
       objectReference: {fileID: 1482044286}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: redbird1controller
+      value: 
+      objectReference: {fileID: 1970768108}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: redbird2controller
+      value: 
+      objectReference: {fileID: 1724702831}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: blackbird1controller
+      value: 
+      objectReference: {fileID: 2083279151}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: blackbird2controller
+      value: 
+      objectReference: {fileID: 1482044286}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: whitebird1controller
+      value: 
+      objectReference: {fileID: 925036780}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: whitebird2controller
+      value: 
+      objectReference: {fileID: 1994540510}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: tictacandtoe1controller
+      value: 
+      objectReference: {fileID: 1591630287}
+    - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: tictacandtoe2controller
+      value: 
+      objectReference: {fileID: 11352581}
     - target: {fileID: 1165032700344563670, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 218.23161

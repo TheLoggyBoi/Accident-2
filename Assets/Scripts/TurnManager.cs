@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class TurnManager : NetworkBehaviour
 {
@@ -32,6 +33,24 @@ public class TurnManager : NetworkBehaviour
     private int myPlayerNumber = 0;
     private bool isInitialized = false;
     private bool gameStarted = false;
+
+    // bird check
+    public GameObject blackbird1;
+    public GameObject blackbird2;
+    public GameObject whitebird1;
+    public GameObject whitebird2;
+    public GameObject redbird1;
+    public GameObject redbird2;
+    public GameObject tictacandtoe1;
+    public GameObject tictacandtoe2;
+    public SlingShotController blackbird1controller;
+    public SlingShotController blackbird2controller;
+    public SlingShotController whitebird1controller;
+    public SlingShotController whitebird2controller;
+    public SlingShotController redbird1controller;
+    public SlingShotController redbird2controller;
+    public SlingShotController tictacandtoe1controller;
+    public SlingShotController tictacandtoe2controller;
 
     public static TurnManager Instance { get; private set; }
 
@@ -474,6 +493,42 @@ public class TurnManager : NetworkBehaviour
     void OnWaitingForBirdChanged(bool previousValue, bool newValue)
     {
         Debug.Log($"Waiting for bird changed to {newValue}");
+    }
+
+   void Update()
+    {
+        if (blackbird1.activeInHierarchy)
+        {
+            player1Slingshot = blackbird1controller;
+        }
+        if (blackbird2.activeInHierarchy)
+        {
+            player2Slingshot = blackbird2controller;
+        }
+        if (redbird1.activeInHierarchy)
+        {
+            player1Slingshot = redbird1controller;
+        }
+        if (redbird2.activeInHierarchy)
+        {
+            player2Slingshot = redbird2controller;
+        }
+        if (whitebird1.activeInHierarchy)
+        {
+            player1Slingshot = whitebird1controller;
+        }
+        if (whitebird2.activeInHierarchy)
+        {
+            player2Slingshot = whitebird2controller;
+        }
+        if (tictacandtoe1.activeInHierarchy)
+        {
+            player1Slingshot = tictacandtoe1controller;
+        }
+        if (tictacandtoe2.activeInHierarchy)
+        {
+            player2Slingshot = tictacandtoe2controller;
+        }
     }
 
 }
