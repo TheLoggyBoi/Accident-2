@@ -5199,10 +5199,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5035800391494378835, guid: 0f33fed9a702907478d8292f15b07ef9, type: 3}
-      propertyPath: m_Name
-      value: Terry1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6979,7 +6975,7 @@ PrefabInstance:
     - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: redbird2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1576371100}
     - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: blackbird1
       value: 
@@ -7035,7 +7031,7 @@ PrefabInstance:
     - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: redbird1controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1576371101}
     - target: {fileID: 747630536215934559, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: redbird2controller
       value: 
