@@ -210,10 +210,6 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 523755627
       objectReference: {fileID: 0}
-    - target: {fileID: -7056665380614650982, guid: 7e9486c93cf66fa428d0277583729dab, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 3730365007
-      objectReference: {fileID: 0}
     - target: {fileID: -6909238291348561652, guid: 7e9486c93cf66fa428d0277583729dab, type: 3}
       propertyPath: leftBand
       value: 
@@ -2765,6 +2761,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1989441347}
+        m_TargetAssemblyTypeName: Unity.Netcode.NetworkManager, Unity.Netcode.Runtime
+        m_MethodName: AddNetworkPrefab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2019398915}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1989441347}
+        m_TargetAssemblyTypeName: Unity.Netcode.NetworkManager, Unity.Netcode.Runtime
+        m_MethodName: AddNetworkPrefab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1036897995}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &986132934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,21 +2909,9 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 2765532234
       objectReference: {fileID: 0}
-    - target: {fileID: -8393613674228566206, guid: 67cb8425224567549ad5b57baba551cd, type: 3}
-      propertyPath: SceneMigrationSynchronization
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8393613674228566206, guid: 67cb8425224567549ad5b57baba551cd, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 2040206772
-      objectReference: {fileID: 0}
     - target: {fileID: 3572722501288140359, guid: 67cb8425224567549ad5b57baba551cd, type: 3}
       propertyPath: m_Name
       value: BlackBird-2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3572722501288140359, guid: 67cb8425224567549ad5b57baba551cd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4242123130935657725, guid: 67cb8425224567549ad5b57baba551cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4991,17 +4999,9 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 248943194
       objectReference: {fileID: 0}
-    - target: {fileID: 1166170947110086493, guid: 5c863594df4d0484789d075433e90e3d, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 1175504627
-      objectReference: {fileID: 0}
     - target: {fileID: 2793877200013611657, guid: 5c863594df4d0484789d075433e90e3d, type: 3}
       propertyPath: m_Name
       value: Terry1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2793877200013611657, guid: 5c863594df4d0484789d075433e90e3d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3282570173645555763, guid: 5c863594df4d0484789d075433e90e3d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5315,17 +5315,9 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1932178986
       objectReference: {fileID: 0}
-    - target: {fileID: -7104029388845508149, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 3357708311
-      objectReference: {fileID: 0}
     - target: {fileID: 5035800391494378835, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
       propertyPath: m_Name
       value: Terry2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5035800391494378835, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5668080756954234857, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6036,10 +6028,6 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 1456978996
       objectReference: {fileID: 0}
-    - target: {fileID: 6802063203396976498, guid: 8e6c837e038d7cc4ba467392a4420f59, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 2554224609
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6274,14 +6262,6 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3528156047
       objectReference: {fileID: 0}
-    - target: {fileID: -1873345581434341466, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
-      propertyPath: SceneMigrationSynchronization
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1873345581434341466, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 4190845283
-      objectReference: {fileID: 0}
     - target: {fileID: 3779077011369172745, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: m_LocalPosition.x
       value: -311.81
@@ -6325,10 +6305,6 @@ PrefabInstance:
     - target: {fileID: 4556000325989909939, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: m_Name
       value: BlackBird-1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556000325989909939, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5909129373237998073, guid: b39d20fee072b2547b3b79f426feac16, type: 3}
       propertyPath: leftBand
@@ -6856,10 +6832,6 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 816671971
       objectReference: {fileID: 0}
-    - target: {fileID: 7640532663793967799, guid: 193ef8d6c3dc42a4fb6e902a27bc8562, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 91958316
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6976,10 +6948,6 @@ PrefabInstance:
     - target: {fileID: 3240108813492422203, guid: 6479f1bac35f3dd4da81fd2c57c4c413, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 2712849156
-      objectReference: {fileID: 0}
-    - target: {fileID: 3240108813492422203, guid: 6479f1bac35f3dd4da81fd2c57c4c413, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 3968324906
       objectReference: {fileID: 0}
     - target: {fileID: 3873223826783705573, guid: 6479f1bac35f3dd4da81fd2c57c4c413, type: 3}
       propertyPath: leftBand

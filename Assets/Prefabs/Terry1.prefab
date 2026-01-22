@@ -66,7 +66,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
+      propertyPath: m_TagString
+      value: Bird
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -102,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1536305369
-  InScenePlacedSourceGlobalObjectIdHash: 3993948781
+  GlobalObjectIdHash: 248943194
+  InScenePlacedSourceGlobalObjectIdHash: 1175504627
   DeferredDespawnTick: 0
   Ownership: 1
   AlwaysReplicateAsRoot: 0
@@ -128,11 +132,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  leftPost: {fileID: 9029277436082938675, guid: 6e6b7aad7288a164a9409375eae30ad6, type: 3}
-  rightPost: {fileID: 1938905081640385541, guid: 872f947c3119cc3419d6d0b7475277f4, type: 3}
-  leftBand: {fileID: 5071685587676804607, guid: 88c0e0e36e58a214f9beb533d4c1869c, type: 3}
-  rightBand: {fileID: 1802200385396546788, guid: 77090e2e9f9695e43bcc3fbfcae688fa, type: 3}
-  trajectoryLine: {fileID: 5807100836599893247, guid: 026d53312bf909c4baa4b57274609ee5, type: 3}
+  leftPost: {fileID: 0}
+  rightPost: {fileID: 0}
+  leftBand: {fileID: 0}
+  rightBand: {fileID: 0}
+  trajectoryLine: {fileID: 0}
   forceMultiplier: 35
   maxStretch: 12
   minLaunch: 0.5

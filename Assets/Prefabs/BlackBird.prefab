@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f68e1364a86073247a1a60ab2e75fc41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -146.4
+      value: -311.81
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f68e1364a86073247a1a60ab2e75fc41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 245.8
+      value: -1.6100006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f68e1364a86073247a1a60ab2e75fc41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -79.3
+      value: -79.96
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f68e1364a86073247a1a60ab2e75fc41, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,7 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f68e1364a86073247a1a60ab2e75fc41, type: 3}
       propertyPath: m_Name
-      value: BlackBird-1
+      value: BlackBird
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f68e1364a86073247a1a60ab2e75fc41, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f68e1364a86073247a1a60ab2e75fc41, type: 3}
       propertyPath: m_TagString
@@ -102,14 +106,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4190845283
-  InScenePlacedSourceGlobalObjectIdHash: 0
+  GlobalObjectIdHash: 3528156047
+  InScenePlacedSourceGlobalObjectIdHash: 4190845283
   DeferredDespawnTick: 0
   Ownership: 1
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
+  SceneMigrationSynchronization: 0
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
