@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -312.41675
+      value: -139.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.35
+      value: 250.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -79.76
+      value: -80.77
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       propertyPath: m_Name
-      value: WhiteBird1
+      value: WhiteBird1-on
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       propertyPath: m_IsActive
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2712849156
+  GlobalObjectIdHash: 2305732274
   InScenePlacedSourceGlobalObjectIdHash: 3968324906
   DeferredDespawnTick: 0
   Ownership: 1

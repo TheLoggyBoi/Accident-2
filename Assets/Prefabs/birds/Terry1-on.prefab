@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -311.81
+      value: -139.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6100006
+      value: 250.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -79.96
+      value: -80.77
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_Name
-      value: Terry1
+      value: Terry1-on
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd2d4cffaf83a844193fe1f0af6650c5, type: 3}
       propertyPath: m_IsActive
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 248943194
+  GlobalObjectIdHash: 1175504627
   InScenePlacedSourceGlobalObjectIdHash: 1175504627
   DeferredDespawnTick: 0
   Ownership: 1
