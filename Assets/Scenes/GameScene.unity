@@ -1674,10 +1674,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 925036779}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8511256105082738703}
+        m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
+        m_MethodName: teleportobject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1686,10 +1686,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1929464938395017227}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8595089796691841624}
+        m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
+        m_MethodName: teleportobject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1698,10 +1698,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2019398915}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2295203192053030474}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1710,10 +1710,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1036897995}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 5668080755313942407}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1722,10 +1722,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1576371100}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 7350026453341349519}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1734,10 +1734,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5035800389770233151}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 9111014932904487387}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1746,10 +1746,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1591630286}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 5948534090480179486}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1758,10 +1758,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8055815074741346363}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8055815074741346365}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2384,6 +2384,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 558532230336971502, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
   m_PrefabInstance: {fileID: 2334802830572851444}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &964699424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964699425}
+  m_Layer: 0
+  m_Name: teleportpoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &964699425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964699424}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1335144700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986132931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,10 +2498,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1036897995}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 9111014932904487386}
+        m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
+        m_MethodName: teleportobject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2479,10 +2510,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2019398915}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 7350026453341349518}
+        m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
+        m_MethodName: teleportobject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2491,10 +2522,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1576371100}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2295203192053030474}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2503,10 +2534,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5035800389770233151}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 5668080755313942407}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2515,10 +2546,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 925036779}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8511256105082738704}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2527,10 +2558,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1929464938395017227}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8595089796691841625}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2539,10 +2570,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1591630286}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 5948534090480179486}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2551,10 +2582,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8055815074741346363}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8055815074741346365}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3000,82 +3031,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 925036779}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1929464938395017227}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2019398915}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1036897995}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1576371100}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5035800389770233151}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1591630286}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 5948534090480179485}
+        m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
+        m_MethodName: teleportobject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3084,10 +3043,82 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8055815074741346363}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8055815074741346364}
+        m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
+        m_MethodName: teleportobject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2295203192053030474}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5668080755313942407}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7350026453341349519}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 9111014932904487387}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5948534090480179486}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 8055815074741346365}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3864,6 +3895,40 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!1 &1335144699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1335144700}
+  m_Layer: 0
+  m_Name: points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1335144700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335144699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 283.02, y: 248.51, z: -80.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 964699425}
+  - {fileID: 1695753782}
+  - {fileID: 1378772680}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1340647143
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,6 +4329,37 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 3211782244231909077, guid: 0b3d849ebcece6d48bd968a21a823cfd, type: 3}
   m_PrefabInstance: {fileID: 7355786199604684332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1378772679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378772680}
+  m_Layer: 0
+  m_Name: resetpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378772680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378772679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -458, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1335144700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1428472957
 GameObject:
   m_ObjectHideFlags: 0
@@ -4347,10 +4443,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1576371100}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2295203192053030473}
+        m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
+        m_MethodName: teleportobject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4359,10 +4455,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5035800389770233151}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 5668080755313942406}
+        m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
+        m_MethodName: teleportobject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4371,10 +4467,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2019398915}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 7350026453341349519}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4383,10 +4479,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1036897995}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 9111014932904487387}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4395,10 +4491,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 925036779}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8511256105082738704}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4407,10 +4503,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1929464938395017227}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8595089796691841625}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4419,10 +4515,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1591630286}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 5948534090480179486}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4431,10 +4527,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8055815074741346363}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8055815074741346365}
+        m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4984,6 +5080,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd870cc414099444ba75024d3d1913b8, type: 3}
+--- !u!1 &1695753781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1695753782}
+  m_Layer: 0
+  m_Name: teleportpoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1695753782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695753781}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -425.62, y: -0.9700012, z: 0.7700043}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1335144700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759242750
 GameObject:
   m_ObjectHideFlags: 0
@@ -6149,7 +6276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079203172100239766, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.27
+      value: -468
       objectReference: {fileID: 0}
     - target: {fileID: 2079203172100239766, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6207,6 +6334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteBird2
       objectReference: {fileID: 0}
+    - target: {fileID: 6416481723984313690, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6776479618896557817, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 3042942028
@@ -6218,7 +6349,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6416481723984313690, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8595089796691841624}
+    - targetCorrespondingSourceObject: {fileID: 6416481723984313690, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8595089796691841625}
   m_SourcePrefab: {fileID: 100100000, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
 --- !u!1001 &1168840237299243051
 PrefabInstance:
@@ -6262,7 +6399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6785711114555662765, guid: 7418ed0ac7fa13c4c9a7ed3e48c4dddd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.45
+      value: -298
       objectReference: {fileID: 0}
     - target: {fileID: 6785711114555662765, guid: 7418ed0ac7fa13c4c9a7ed3e48c4dddd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6307,7 +6444,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6152023618679405335, guid: 7418ed0ac7fa13c4c9a7ed3e48c4dddd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2295203192053030473}
+    - targetCorrespondingSourceObject: {fileID: 6152023618679405335, guid: 7418ed0ac7fa13c4c9a7ed3e48c4dddd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2295203192053030474}
   m_SourcePrefab: {fileID: 100100000, guid: 7418ed0ac7fa13c4c9a7ed3e48c4dddd, type: 3}
 --- !u!1001 &1864373293545546995
 PrefabInstance:
@@ -6331,7 +6474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5761737708341694106, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.572937
+      value: -450
       objectReference: {fileID: 0}
     - target: {fileID: 5761737708341694106, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6371,7 +6514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7759590229683615627, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9176468074440775351, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
       propertyPath: leftBand
@@ -6396,7 +6539,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7759590229683615627, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8055815074741346364}
+    - targetCorrespondingSourceObject: {fileID: 7759590229683615627, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8055815074741346365}
   m_SourcePrefab: {fileID: 100100000, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
 --- !u!1 &1929464938395017227 stripped
 GameObject:
@@ -6408,6 +6557,32 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 6539476310020069148, guid: d1ef32ae63f0c7b45959c29d06c80480, type: 3}
   m_PrefabInstance: {fileID: 5923011688487024224}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2295203192053030473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576371100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 1695753782}
+--- !u!114 &2295203192053030474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576371100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetpoint: {fileID: 1378772680}
 --- !u!114 &2314133745496054542 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9176468074440775351, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
@@ -6433,7 +6608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 558532230336971502, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 903990655450601556, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6441,7 +6616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 903990655450601556, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.35
+      value: -311
       objectReference: {fileID: 0}
     - target: {fileID: 903990655450601556, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6506,7 +6681,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 558532230336971502, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8511256105082738703}
+    - targetCorrespondingSourceObject: {fileID: 558532230336971502, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8511256105082738704}
   m_SourcePrefab: {fileID: 100100000, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
 --- !u!114 &2633385053383289485 stripped
 MonoBehaviour:
@@ -6577,7 +6758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6180019209210319770, guid: 16689566c4cc6914f94077601a63a518, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.57
+      value: -318
       objectReference: {fileID: 0}
     - target: {fileID: 6180019209210319770, guid: 16689566c4cc6914f94077601a63a518, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6617,12 +6798,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6811701131658529056, guid: 16689566c4cc6914f94077601a63a518, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6811701131658529056, guid: 16689566c4cc6914f94077601a63a518, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5948534090480179485}
+    - targetCorrespondingSourceObject: {fileID: 6811701131658529056, guid: 16689566c4cc6914f94077601a63a518, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5948534090480179486}
   m_SourcePrefab: {fileID: 100100000, guid: 16689566c4cc6914f94077601a63a518, type: 3}
 --- !u!4 &3911284916733167806 stripped
 Transform:
@@ -6694,7 +6881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6759518135252203052, guid: c9050701c2238374b9b53e6aa825ee20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.32
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6759518135252203052, guid: c9050701c2238374b9b53e6aa825ee20, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6731,13 +6918,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2273213064301177725, guid: c9050701c2238374b9b53e6aa825ee20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5668080755313942406}
+    - targetCorrespondingSourceObject: {fileID: 2273213064301177725, guid: c9050701c2238374b9b53e6aa825ee20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5668080755313942407}
   m_SourcePrefab: {fileID: 100100000, guid: c9050701c2238374b9b53e6aa825ee20, type: 3}
 --- !u!4 &5668080755313942405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6759518135252203052, guid: c9050701c2238374b9b53e6aa825ee20, type: 3}
   m_PrefabInstance: {fileID: 5341095743634895688}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5668080755313942406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035800389770233151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 964699425}
+--- !u!114 &5668080755313942407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035800389770233151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetpoint: {fileID: 1378772680}
 --- !u!114 &5909129371960025298 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8571467835636470335, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
@@ -6809,6 +7028,32 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6940446832737896261}
   m_SourcePrefab: {fileID: 100100000, guid: d1ef32ae63f0c7b45959c29d06c80480, type: 3}
+--- !u!114 &5948534090480179485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591630286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 1695753782}
+--- !u!114 &5948534090480179486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591630286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetpoint: {fileID: 1378772680}
 --- !u!114 &6254772115354892509 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7242657681774814453, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
@@ -6842,7 +7087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3810488096396778803, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6100006
+      value: -270.6
       objectReference: {fileID: 0}
     - target: {fileID: 3810488096396778803, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6882,7 +7127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4587551809134249865, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8571467835636470335, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
       propertyPath: leftBand
@@ -6907,7 +7152,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4587551809134249865, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7350026453341349518}
+    - targetCorrespondingSourceObject: {fileID: 4587551809134249865, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7350026453341349519}
   m_SourcePrefab: {fileID: 100100000, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
 --- !u!1 &6940446832737896260 stripped
 GameObject:
@@ -6981,7 +7232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049007828318904212, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1799927
+      value: -302
       objectReference: {fileID: 0}
     - target: {fileID: 7049007828318904212, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7021,12 +7272,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681113367466280238, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7681113367466280238, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9111014932904487386}
+    - targetCorrespondingSourceObject: {fileID: 7681113367466280238, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9111014932904487387}
   m_SourcePrefab: {fileID: 100100000, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
 --- !u!1001 &7154848866564599386
 PrefabInstance:
@@ -7192,6 +7449,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5761737708341694106, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
   m_PrefabInstance: {fileID: 1864373293545546995}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7350026453341349518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019398915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 1695753782}
+--- !u!114 &7350026453341349519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019398915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetpoint: {fileID: 1378772680}
 --- !u!1001 &7355786199604684332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7273,11 +7556,115 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7759590229683615627, guid: 812142d88da46f14ba1b299841a6f3f4, type: 3}
   m_PrefabInstance: {fileID: 1864373293545546995}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8055815074741346364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8055815074741346363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 964699425}
+--- !u!114 &8055815074741346365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8055815074741346363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetpoint: {fileID: 1378772680}
 --- !u!120 &8441379704965697192 stripped
 LineRenderer:
   m_CorrespondingSourceObject: {fileID: 4081000081831742098, guid: d1ef32ae63f0c7b45959c29d06c80480, type: 3}
   m_PrefabInstance: {fileID: 5923011688487024224}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8511256105082738703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925036779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 1695753782}
+--- !u!114 &8511256105082738704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925036779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetpoint: {fileID: 1378772680}
+--- !u!114 &8595089796691841624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929464938395017227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 964699425}
+--- !u!114 &8595089796691841625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929464938395017227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetpoint: {fileID: 1378772680}
+--- !u!114 &9111014932904487386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036897995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 964699425}
+--- !u!114 &9111014932904487387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036897995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetpoint: {fileID: 1378772680}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -7294,3 +7681,4 @@ SceneRoots:
   - {fileID: 1240734929}
   - {fileID: 801751145}
   - {fileID: 149610492}
+  - {fileID: 1335144700}
