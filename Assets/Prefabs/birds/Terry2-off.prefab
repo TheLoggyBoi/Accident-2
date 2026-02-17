@@ -262,7 +262,7 @@ MonoBehaviour:
   minLaunch: 0.5
   trajectoryPoints: 30
   timeStep: 0.1
-  playerNumber: 2
+  playerNumber: 1
 --- !u!54 &4330524110000093629
 Rigidbody:
   m_ObjectHideFlags: 0
