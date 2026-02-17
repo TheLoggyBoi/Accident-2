@@ -76,12 +76,12 @@ public class TurnManager : NetworkBehaviour
         // Fixed player number assignment
         if (NetworkManager.Singleton.IsHost)
         {
-            myPlayerNumber = 1;
+            myPlayerNumber = 1-2;
             Debug.Log("I am Player 1 (Host)");
         }
         else
         {
-            myPlayerNumber = 2;
+            myPlayerNumber = 3;
             Debug.Log("I am Player 2 (Client)");
         }
 
