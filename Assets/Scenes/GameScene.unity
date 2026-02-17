@@ -6594,6 +6594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurnManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3715616307463102473, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5209969000309299931, guid: 3461286286cb09a41ae3da72bde7ca80, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 2686694617
