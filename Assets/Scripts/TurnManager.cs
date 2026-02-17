@@ -76,12 +76,12 @@ public class TurnManager : NetworkBehaviour
         // Fixed player number assignment
         if (NetworkManager.Singleton.IsHost)
         {
-            myPlayerNumber = 1-2;
+            myPlayerNumber = 1;
             Debug.Log("I am Player 1 (Host)");
         }
         else
         {
-            myPlayerNumber = 3;
+            myPlayerNumber = 2;
             Debug.Log("I am Player 2 (Client)");
         }
 
@@ -179,7 +179,7 @@ public class TurnManager : NetworkBehaviour
 
         if (player2Slingshot != null)
         {
-            bool player2ShouldBeActive = (currentPlayer.Value == 2);
+            bool player2ShouldBeActive = (currentPlayer.Value == 1);
             player2Slingshot.SetActive(player2ShouldBeActive);
             Debug.Log($"Player 2 slingshot active: {player2ShouldBeActive}");
         }
@@ -200,7 +200,7 @@ public class TurnManager : NetworkBehaviour
 
         if (player2Camera != null)
         {
-            bool shouldActivateP2Camera = (currentPlayer.Value == 2);
+            bool shouldActivateP2Camera = (currentPlayer.Value == 1);
             player2Camera.gameObject.SetActive(shouldActivateP2Camera);
             Debug.Log($"Player 2 camera set to: {shouldActivateP2Camera}");
         }
@@ -258,7 +258,7 @@ public class TurnManager : NetworkBehaviour
         bool isValidTurn = false;
         if (currentPlayer.Value == 1 && clientId == 0) // Host is Player 1, clientId 0
             isValidTurn = true;
-        else if (currentPlayer.Value == 2 && clientId != 0) // Client is Player 2, clientId != 0
+        else if (currentPlayer.Value == 1 && clientId != 0) // Client is Player 2, clientId != 0
             isValidTurn = true;
 
         if (!isValidTurn)
