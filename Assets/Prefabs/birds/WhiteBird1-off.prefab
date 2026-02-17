@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       propertyPath: m_Name
-      value: WhiteBird1
+      value: WhiteBird1-off
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       propertyPath: m_IsActive
@@ -88,6 +88,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1518575916751419702}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6099440310754644563}
   m_SourcePrefab: {fileID: 100100000, guid: 5d4dc8f9ef29c2749b5115282b3fc806, type: 3}
 --- !u!1 &3877321633461994561 stripped
 GameObject:
@@ -106,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2712849156
+  GlobalObjectIdHash: 3968324906
   InScenePlacedSourceGlobalObjectIdHash: 3968324906
   DeferredDespawnTick: 0
   Ownership: 1
@@ -193,3 +196,17 @@ CapsuleCollider:
   m_Height: 3.2827032
   m_Direction: 1
   m_Center: {x: -0.192626, y: 1.3386843, z: -0.48567924}
+--- !u!114 &-6099440310754644563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3877321633461994561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e039bedad824c24192743ec0b1447ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  downwardPushforce: 100

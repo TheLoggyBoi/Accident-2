@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 3031575993087425624}
   - component: {fileID: 5238338075026964584}
   - component: {fileID: 1682780501476450428}
+  - component: {fileID: -5260570634926140860}
   m_Layer: 0
   m_Name: WhiteBird2-on
   m_TagString: Bird
@@ -484,6 +485,20 @@ CapsuleCollider:
   m_Height: 3.0811305
   m_Direction: 1
   m_Center: {x: -0.07927179, y: 1.4827731, z: -0.30584645}
+--- !u!114 &-5260570634926140860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416481723984313690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e039bedad824c24192743ec0b1447ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  downwardPushforce: 100
 --- !u!1 &7404494456882117955
 GameObject:
   m_ObjectHideFlags: 0

@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 121933076082246843}
   - component: {fileID: 6047720894950241783}
   - component: {fileID: 1478744030915393259}
+  - component: {fileID: -9142912641752692634}
   m_Layer: 0
   m_Name: WhiteBird2-off
   m_TagString: Bird
@@ -397,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2936910155
+  GlobalObjectIdHash: 1105711355
   InScenePlacedSourceGlobalObjectIdHash: 1105711355
   DeferredDespawnTick: 0
   Ownership: 1
@@ -484,6 +485,20 @@ CapsuleCollider:
   m_Height: 3.0811305
   m_Direction: 1
   m_Center: {x: -0.07927179, y: 1.4827731, z: -0.30584645}
+--- !u!114 &-9142912641752692634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4498217100263458731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e039bedad824c24192743ec0b1447ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  downwardPushforce: 100
 --- !u!1 &5168800458021134941
 GameObject:
   m_ObjectHideFlags: 0
