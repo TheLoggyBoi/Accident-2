@@ -6984,6 +6984,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1000029240}
     m_Modifications:
+    - target: {fileID: -8713052696750239256, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      propertyPath: SyncScaleX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8713052696750239256, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      propertyPath: SyncScaleY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8713052696750239256, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      propertyPath: SyncScaleZ
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8713052696750239256, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      propertyPath: SyncRotAngleX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8713052696750239256, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      propertyPath: SyncRotAngleY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8713052696750239256, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      propertyPath: SyncRotAngleZ
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5260570634926140860, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
       propertyPath: rb
       value: 
@@ -7047,7 +7071,7 @@ PrefabInstance:
     - target: {fileID: 3031575993087425624, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
       propertyPath: trajectoryLine
       value: 
-      objectReference: {fileID: 1527295715}
+      objectReference: {fileID: 1610159238}
     - target: {fileID: 6416481723984313690, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
       propertyPath: m_Name
       value: WhiteBird2
@@ -7375,7 +7399,7 @@ PrefabInstance:
     - target: {fileID: 7242657681774814453, guid: 5de3166efe9f2a647a80478729df951c, type: 3}
       propertyPath: trajectoryLine
       value: 
-      objectReference: {fileID: 1423944226}
+      objectReference: {fileID: 1932552322072874688}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
