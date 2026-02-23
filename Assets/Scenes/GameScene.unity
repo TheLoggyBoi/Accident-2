@@ -6305,6 +6305,7 @@ MonoBehaviour:
     Address: 0.0.0.0
     Port: 7777
     ServerListenAddress: 0.0.0.0
+    ClientBindPort: 0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0
@@ -6983,6 +6984,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1000029240}
     m_Modifications:
+    - target: {fileID: -5260570634926140860, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1043539064804659844}
     - target: {fileID: 2079203172100239766, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
       propertyPath: m_LocalPosition.x
       value: 107.06
@@ -7072,9 +7077,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6416481723984313690, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8595089796691841626}
-    - targetCorrespondingSourceObject: {fileID: 6416481723984313690, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8595089796691841627}
   m_SourcePrefab: {fileID: 100100000, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
 --- !u!54 &1043539064804659844 stripped
 Rigidbody:
@@ -8464,20 +8466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: {fileID: 1378772680}
---- !u!114 &8595089796691841627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929464938395017227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e039bedad824c24192743ec0b1447ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1043539064804659844}
-  downwardPushforce: 10
 --- !u!114 &9111014932904487386
 MonoBehaviour:
   m_ObjectHideFlags: 0
