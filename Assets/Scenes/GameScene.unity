@@ -8259,10 +8259,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4587551809134249865, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
-      propertyPath: m_TagString
-      value: Bomb
-      objectReference: {fileID: 0}
     - target: {fileID: 8571467835636470335, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
       propertyPath: leftBand
       value: 
@@ -8410,10 +8406,6 @@ PrefabInstance:
     - target: {fileID: 7681113367466280238, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681113367466280238, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
-      propertyPath: m_TagString
-      value: Bomb
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
