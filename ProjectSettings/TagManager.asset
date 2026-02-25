@@ -7,6 +7,7 @@ TagManager:
   - Bird
   - Ground
   - TicTacToeSquare
+  - Bomb
   layers:
   - Default
   - TransparentFX
