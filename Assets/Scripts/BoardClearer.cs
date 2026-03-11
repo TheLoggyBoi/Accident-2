@@ -19,7 +19,7 @@ public class BoardClearer : MonoBehaviour
         // Deactivate all symbols on the board
         foreach (GameObject symbol in symbols)
         {
-            symbol.SetActive(false);
+            symbol.SetActive(true);
         }
         Debug.Log("Board Cleared!");
         // Reset your game logic here
