@@ -4,13 +4,19 @@ public class BoardClearer : MonoBehaviour
 {
     // Drag and drop your X/O container objects or assign them in script
     public GameObject[] symbols;
+    public TicTacToeBoard TicTacToeBoard;
 
+
+    private void Start()
+    {
+       TicTacToeBoard = GameObject.Find("TicTacToeBoard").GetComponent<TicTacToeBoard>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         // Check if the character hits the board
         if (collision.gameObject.CompareTag("Bomb"))
         {
-            ClearBoard();
+            TicTacToeBoard.ResetBoard();
         }
     }
 
