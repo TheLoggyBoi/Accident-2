@@ -5,13 +5,20 @@ public class whitebird : MonoBehaviour
 {
     public Rigidbody rb;
     public float downwardPushforce = 10f;
+    public TicTacToeBoard TicTacToeBoard;
 
-    private void Update()
+    private void Start()
+    {
+        TicTacToeBoard = GameObject.Find("TicTacToeBoard").GetComponent<TicTacToeBoard>();
+    }
+
+    public void Update()
     {
          if (Input.GetKeyUp(KeyCode.Space))
         {
             Debug.Log("white bird worked");
             applydownwardPush();
+           
         }
     }
 
@@ -24,4 +31,5 @@ public class whitebird : MonoBehaviour
             rb.AddForce(Vector3.down*downwardPushforce, ForceMode.Impulse);
         }
     }
+
 }
