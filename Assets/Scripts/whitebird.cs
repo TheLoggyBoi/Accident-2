@@ -6,11 +6,7 @@ public class whitebird : MonoBehaviour
     public Rigidbody rb;
     public float downwardPushforce = 10f;
     public TicTacToeBoard TicTacToeBoard;
-
-    private void Start()
-    {
-        TicTacToeBoard = GameObject.Find("TicTacToeBoard").GetComponent<TicTacToeBoard>();
-    }
+    public TicTacToeSquare TicTacToeSquare;
 
     public void Update()
     {
@@ -18,7 +14,6 @@ public class whitebird : MonoBehaviour
         {
             Debug.Log("white bird worked");
             applydownwardPush();
-           
         }
     }
 
@@ -32,4 +27,8 @@ public class whitebird : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        TicTacToeSquare.ClearSquare();
+    }
 }
