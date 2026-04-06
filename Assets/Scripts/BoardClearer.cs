@@ -7,11 +7,11 @@ public class BoardClearer : MonoBehaviour
     public TicTacToeBoard TicTacToeBoard;
 
 
-    private void Start()
+    void Start()
     {
        TicTacToeBoard = GameObject.Find("TicTacToeBoard").GetComponent<TicTacToeBoard>();
     }
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         // Check if the character hits the board
         if (collision.gameObject.CompareTag("Bomb"))

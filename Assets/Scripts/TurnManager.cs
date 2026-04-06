@@ -494,41 +494,4 @@ public class TurnManager : NetworkBehaviour
     {
         Debug.Log($"Waiting for bird changed to {newValue}");
     }
-
-   void Update()
-    {
-        if (blackbird1.activeInHierarchy)
-        {
-            player1Slingshot = blackbird1controller;    
-        }
-        if (blackbird2.activeInHierarchy)
-        {
-            player2Slingshot = blackbird2controller;      
-        }
-        if (redbird1.activeInHierarchy)
-        {
-            player1Slingshot = redbird1controller;           
-        }
-        if (redbird2.activeInHierarchy)
-        {
-            player2Slingshot = redbird2controller;
-        }
-        if (whitebird1.activeInHierarchy)
-        {
-            player1Slingshot = whitebird1controller;            
-        }
-        if (whitebird2.activeInHierarchy)
-        {
-            player2Slingshot = whitebird2controller;
-        }
-        if (tictacandtoe1.activeInHierarchy)
-        {
-            player1Slingshot = tictacandtoe1controller;     
-        }
-        if (tictacandtoe2.activeInHierarchy)
-        {
-            player2Slingshot = tictacandtoe2controller;
-        }
-    }
-
 }
