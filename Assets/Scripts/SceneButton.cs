@@ -29,6 +29,11 @@ public class SceneButton : MonoBehaviour
 
     }
 
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("howtoplay");
+    }
+
     public void CreditsScene()
     {
         SceneManager.LoadScene("Credits");
