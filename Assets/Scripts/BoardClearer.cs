@@ -17,7 +17,7 @@ public class BoardClearer : MonoBehaviour
         if (collision.gameObject.CompareTag("Bomb"))
         {
             TicTacToeBoard.ResetBoard();
-            Debug.Log("bomb worked");
+            Debug.Log("Bomb Worked");
         }
     }
 
