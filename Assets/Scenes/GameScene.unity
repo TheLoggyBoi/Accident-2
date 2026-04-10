@@ -8773,6 +8773,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4587551809134249865, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7350026453341349520}
+    - targetCorrespondingSourceObject: {fileID: 4587551809134249865, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7350026453341349521}
   m_SourcePrefab: {fileID: 100100000, guid: a8b19bb6c6201e94986b16a2c296b86d, type: 3}
 --- !u!1 &6940446832737896260 stripped
 GameObject:
@@ -8909,6 +8912,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7681113367466280238, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9111014932904487388}
+    - targetCorrespondingSourceObject: {fileID: 7681113367466280238, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9111014932904487389}
   m_SourcePrefab: {fileID: 100100000, guid: 868ea3351a66cfc46b5b838241dd73cb, type: 3}
 --- !u!1001 &7154848866564599386
 PrefabInstance:
@@ -9162,6 +9168,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: {fileID: 1378772680}
+--- !u!114 &7350026453341349521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019398915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0ae966070f338408f3ee50e32b5478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symbols: []
+  TicTacToeBoard: {fileID: 0}
 --- !u!1001 &7355786199604684332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9451,6 +9471,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startpoint: {fileID: 1378772680}
+--- !u!114 &9111014932904487389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036897995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0ae966070f338408f3ee50e32b5478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  symbols: []
+  TicTacToeBoard: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
