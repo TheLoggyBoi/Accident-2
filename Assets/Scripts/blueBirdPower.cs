@@ -1,14 +1,13 @@
 using UnityEngine;
+using System.Collections;
 
 // Attach this to the blue bird (SlingShotController GameObject).
-// When the bird is in flight, press the ability key to split into clones
-// that fan out and follow the same trajectory as the original.
+// Press the ability key while in flight to split into a left and right clone.
 public class blueBirdPower : MonoBehaviour
 {
     [Header("Split Settings")]
-    [SerializeField] private GameObject clonePrefab;   // Assign the blue bird prefab
-    [SerializeField] private int cloneCount = 2;        // How many extra birds to spawn
-    [SerializeField] private float spreadAngle = 15f;   // Degrees between each clone
+    [SerializeField] private GameObject clonePrefab;
+    [SerializeField] private float spreadAngle = 20f;   // Degrees left/right from travel direction
     [SerializeField] private KeyCode abilityKey = KeyCode.Space;
 
     private Rigidbody rb;
@@ -21,7 +20,6 @@ public class blueBirdPower : MonoBehaviour
 
     void Update()
     {
-        // Only activate once, while the bird is actually flying (not kinematic)
         if (hasActivated) return;
         if (rb == null || rb.isKinematic) return;
         if (!Input.GetKeyDown(abilityKey)) return;
@@ -34,61 +32,61 @@ public class blueBirdPower : MonoBehaviour
         hasActivated = true;
 
         Vector3 velocity = rb.linearVelocity;
-        if (velocity == Vector3.zero) return;
+        if (velocity.sqrMagnitude < 0.01f) return;
 
-        // Spread clones evenly around the original direction
-        // e.g. 2 clones at -15 and +15 degrees
-        float startAngle = -(cloneCount - 1) * spreadAngle / 2f;
+        // Rotate left and right around the Y axis (horizontal spread)
+        // so one clone goes left and one goes right relative to travel direction
+        Vector3 leftVelocity  = Quaternion.AngleAxis(-spreadAngle, Vector3.up) * velocity;
+        Vector3 rightVelocity = Quaternion.AngleAxis( spreadAngle, Vector3.up) * velocity;
 
-        for (int i = 0; i < cloneCount; i++)
-        {
-            float angle = startAngle + i * spreadAngle;
-            SpawnClone(velocity, angle);
-        }
+        StartCoroutine(SpawnClone(leftVelocity));
+        StartCoroutine(SpawnClone(rightVelocity));
     }
 
-    void SpawnClone(Vector3 originalVelocity, float angleOffset)
+    // Coroutine so we can set velocity on the next fixed update,
+    // which is required for a freshly instantiated Rigidbody to actually move.
+    IEnumerator SpawnClone(Vector3 targetVelocity)
     {
         if (clonePrefab == null)
         {
             Debug.LogWarning("blueBirdPower: clonePrefab is not assigned!");
-            return;
+            yield break;
         }
-
-        // Rotate the velocity around the Z axis (up/down spread) or Y axis (left/right)
-        // Using Z gives a vertical fan; swap to Y for a horizontal fan
-        Quaternion rotation = Quaternion.AngleAxis(angleOffset, Vector3.forward);
-        Vector3 cloneVelocity = rotation * originalVelocity;
 
         GameObject clone = Instantiate(clonePrefab, transform.position, transform.rotation);
 
-        // Give the clone the same speed in its new direction
-        Rigidbody cloneRb = clone.GetComponent<Rigidbody>();
-        if (cloneRb == null)
-            cloneRb = clone.AddComponent<Rigidbody>();
+        // Ensure tag is set for board collision detection
+        clone.tag = "Bird";
 
-        cloneRb.isKinematic = false;
-        cloneRb.linearVelocity = cloneVelocity;
-
-        // Make sure the clone has a collider
+        // Ensure it has a collider
         if (clone.GetComponent<Collider>() == null)
         {
             SphereCollider col = clone.AddComponent<SphereCollider>();
             col.radius = 0.5f;
         }
 
-        // Tag it as a bird so tic-tac-toe squares can detect it
-        clone.tag = "Bird";
+        // Get or add rigidbody
+        Rigidbody cloneRb = clone.GetComponent<Rigidbody>();
+        if (cloneRb == null)
+            cloneRb = clone.AddComponent<Rigidbody>();
 
-        // Attach the clone follower so it can claim squares on hit
+        // Must be non-kinematic before setting velocity
+        cloneRb.isKinematic = false;
+
+        // Wait one fixed frame so Unity registers the rigidbody properly
+        yield return new WaitForFixedUpdate();
+
+        if (cloneRb != null)
+            cloneRb.linearVelocity = targetVelocity;
+
+        // Add the clone collision handler
         BlueBirdClone cloneScript = clone.GetComponent<BlueBirdClone>();
         if (cloneScript == null)
             cloneScript = clone.AddComponent<BlueBirdClone>();
 
-        cloneScript.playerNumber = GetComponent<SlingShotController>() != null
-            ? GetComponent<SlingShotController>().GetPlayerNumber()
-            : 1;
+        SlingShotController sc = GetComponent<SlingShotController>();
+        cloneScript.playerNumber = sc != null ? sc.GetPlayerNumber() : 1;
 
-        Debug.Log($"Blue bird spawned clone with velocity {cloneVelocity}");
+        Debug.Log($"Blue bird clone launched with velocity {targetVelocity}");
     }
 }
