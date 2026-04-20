@@ -14,6 +14,11 @@ public class SceneButton : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
+    public void HowtoplayScene()
+    {
+        SceneManager.LoadScene("Howtoplay");
+    }
+
     public void MultiPLayerSessionCreatorScene()
     {
         SceneManager.LoadScene("MultiPLayerSessionCreatorScene");

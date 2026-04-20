@@ -3210,7 +3210,7 @@ PrefabInstance:
       objectReference: {fileID: 6776460993804309018}
     - target: {fileID: 9086792456077363591, guid: 0a822854f1696d140bdc61bc9c3400a3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GameSceneLoader
+      value: HowtoplayScene
       objectReference: {fileID: 0}
     - target: {fileID: 9086792456077363591, guid: 0a822854f1696d140bdc61bc9c3400a3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
