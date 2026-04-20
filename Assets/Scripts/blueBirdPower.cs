@@ -7,21 +7,28 @@ public class blueBirdPower : MonoBehaviour
 {
     [Header("Split Settings")]
     [SerializeField] private GameObject clonePrefab;
-    [SerializeField] private float spreadAngle = 20f;   // Degrees left/right from travel direction
+    [SerializeField] private float spreadAngle = 20f;
     [SerializeField] private KeyCode abilityKey = KeyCode.Space;
+    [SerializeField] private float cloneLifetime = 5f; // auto-destroy after this many seconds
 
     private Rigidbody rb;
     private bool hasActivated = false;
+    private SlingShotController sc;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        sc = GetComponent<SlingShotController>();
     }
 
     void Update()
     {
         if (hasActivated) return;
         if (rb == null || rb.isKinematic) return;
+
+        // Only the owner of this slingshot should be able to activate it
+        if (sc != null && !sc.IsOwner) return;
+
         if (!Input.GetKeyDown(abilityKey)) return;
 
         Activate();
@@ -34,8 +41,6 @@ public class blueBirdPower : MonoBehaviour
         Vector3 velocity = rb.linearVelocity;
         if (velocity.sqrMagnitude < 0.01f) return;
 
-        // Rotate left and right around the Y axis (horizontal spread)
-        // so one clone goes left and one goes right relative to travel direction
         Vector3 leftVelocity  = Quaternion.AngleAxis(-spreadAngle, Vector3.up) * velocity;
         Vector3 rightVelocity = Quaternion.AngleAxis( spreadAngle, Vector3.up) * velocity;
 
@@ -43,8 +48,6 @@ public class blueBirdPower : MonoBehaviour
         StartCoroutine(SpawnClone(rightVelocity));
     }
 
-    // Coroutine so we can set velocity on the next fixed update,
-    // which is required for a freshly instantiated Rigidbody to actually move.
     IEnumerator SpawnClone(Vector3 targetVelocity)
     {
         if (clonePrefab == null)
@@ -55,26 +58,20 @@ public class blueBirdPower : MonoBehaviour
 
         GameObject clone = Instantiate(clonePrefab, transform.position, transform.rotation);
 
-        // Strip any slingshot/network scripts immediately — before their Start() runs
-        // so nothing can set isKinematic = true on us after we set it false.
-        foreach (var nb in clone.GetComponents<SlingShotController>())
-            Destroy(nb);
-        foreach (var nb in clone.GetComponents<Unity.Netcode.NetworkBehaviour>())
-            Destroy(nb);
-        foreach (var no in clone.GetComponents<Unity.Netcode.NetworkObject>())
-            Destroy(no);
+        // Strip slingshot/network components so nothing resets isKinematic
+        foreach (var s in clone.GetComponents<SlingShotController>()) Destroy(s);
+        foreach (var nb in clone.GetComponents<Unity.Netcode.NetworkBehaviour>()) Destroy(nb);
+        foreach (var no in clone.GetComponents<Unity.Netcode.NetworkObject>()) Destroy(no);
+        foreach (var bp in clone.GetComponents<blueBirdPower>()) Destroy(bp);
 
-        // Ensure tag is set for board collision detection
         clone.tag = "Bird";
 
-        // Ensure it has a collider
         if (clone.GetComponent<Collider>() == null)
         {
             SphereCollider col = clone.AddComponent<SphereCollider>();
             col.radius = 0.5f;
         }
 
-        // Get or add rigidbody and force non-kinematic immediately
         Rigidbody cloneRb = clone.GetComponent<Rigidbody>();
         if (cloneRb == null)
             cloneRb = clone.AddComponent<Rigidbody>();
@@ -82,20 +79,19 @@ public class blueBirdPower : MonoBehaviour
         cloneRb.isKinematic = false;
         cloneRb.useGravity = true;
 
-        // Wait one fixed frame then apply velocity
         yield return new WaitForFixedUpdate();
 
-        // Re-assert in case anything snuck in during that frame
         cloneRb.isKinematic = false;
         cloneRb.linearVelocity = targetVelocity;
 
-        // Add the clone collision handler
         BlueBirdClone cloneScript = clone.GetComponent<BlueBirdClone>();
         if (cloneScript == null)
             cloneScript = clone.AddComponent<BlueBirdClone>();
 
-        SlingShotController sc = GetComponent<SlingShotController>();
         cloneScript.playerNumber = sc != null ? sc.GetPlayerNumber() : 1;
+
+        // Auto-destroy so the clone doesn't linger on screen forever
+        Destroy(clone, cloneLifetime);
 
         Debug.Log($"Blue bird clone launched with velocity {targetVelocity}");
     }
