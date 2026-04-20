@@ -496,37 +496,29 @@ public class TurnManager : NetworkBehaviour
     }
     private void Update()
     {
-        if (blackbird1.activeInHierarchy)
+        // Each machine only updates its OWN player's slingshot reference
+        // so Player 2 choosing a bird doesn't get overwritten by Player 1's scene state.
+        if (myPlayerNumber == 1)
         {
-            player1Slingshot = blackbird1controller;
+            if (blackbird1 != null && blackbird1.activeInHierarchy)
+                player1Slingshot = blackbird1controller;
+            else if (redbird1 != null && redbird1.activeInHierarchy)
+                player1Slingshot = redbird1controller;
+            else if (whitebird1 != null && whitebird1.activeInHierarchy)
+                player1Slingshot = whitebird1controller;
+            else if (tictacandtoe1 != null && tictacandtoe1.activeInHierarchy)
+                player1Slingshot = tictacandtoe1controller;
         }
-        if (blackbird2.activeInHierarchy)
+        else if (myPlayerNumber == 2)
         {
-            player2Slingshot = blackbird2controller;
-        }
-        if (redbird1.activeInHierarchy)
-        {
-            player1Slingshot = redbird1controller;
-        }
-        if (redbird2.activeInHierarchy)
-        {
-            player2Slingshot = redbird2controller;
-        }
-        if (whitebird1.activeInHierarchy)
-        {
-            player1Slingshot = whitebird1controller;
-        }
-        if (whitebird2.activeInHierarchy)
-        {
-            player2Slingshot = whitebird2controller;
-        }
-        if (tictacandtoe1.activeInHierarchy)
-        {
-            player1Slingshot = tictacandtoe1controller;
-        }
-        if (tictacandtoe2.activeInHierarchy)
-        {
-            player2Slingshot = tictacandtoe2controller;
+            if (blackbird2 != null && blackbird2.activeInHierarchy)
+                player2Slingshot = blackbird2controller;
+            else if (redbird2 != null && redbird2.activeInHierarchy)
+                player2Slingshot = redbird2controller;
+            else if (whitebird2 != null && whitebird2.activeInHierarchy)
+                player2Slingshot = whitebird2controller;
+            else if (tictacandtoe2 != null && tictacandtoe2.activeInHierarchy)
+                player2Slingshot = tictacandtoe2controller;
         }
     }
 }

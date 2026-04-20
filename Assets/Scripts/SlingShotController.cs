@@ -85,53 +85,16 @@ public class SlingShotController : NetworkBehaviour
 
     bool CanHandleInput()
     {
-        // Simplified for debugging - let's see if the basic mechanics work first
-        Debug.Log($"CanHandleInput check for Player {playerNumber}: NetworkSpawned={isNetworkSpawned}, Active={isActive}");
-        
-        // Basic checks first
-        if (!isActive)
-        {
-            Debug.Log($"Slingshot {playerNumber} is not active");
-            return false;
-        }
-        
-        // Ensure this slingshot has been network spawned
-        if (!isNetworkSpawned)
-        {
-            Debug.Log($"Slingshot {playerNumber} is not network spawned");
-            return false;
-        }
-        
-        // Check if TurnManager exists
-        if (TurnManager.Instance == null)
-        {
-            Debug.Log($"TurnManager.Instance is null for Player {playerNumber}");
-            return false;
-        }
-        
-        if (!TurnManager.Instance.IsSpawned)
-        {
-            Debug.Log($"TurnManager not spawned for Player {playerNumber}");
-            return false;
-        }
+        if (!isActive) return false;
+        if (!isNetworkSpawned) return false;
+        if (TurnManager.Instance == null) return false;
+        if (!TurnManager.Instance.IsSpawned) return false;
+        if (!TurnManager.Instance.IsGameActive()) return false;
 
-        // Check if the game is active
-        if (!TurnManager.Instance.IsGameActive())
-        {
-            Debug.Log($"Game not active for Player {playerNumber}");
-            return false;
-        }
-
-        // Get current player from turn manager
+        // isActive is already set by TurnManager.SetPlayerTurn() for the correct player.
+        // Just confirm the current turn matches this slingshot's player number.
         int currentPlayer = TurnManager.Instance.GetCurrentPlayer();
-        int myPlayerNumber = TurnManager.Instance.GetMyPlayerNumber();
-        
-        // Simplified logic: just check if it's my turn
-        bool isMyTurn = (currentPlayer == playerNumber && myPlayerNumber == playerNumber);
-        
-        Debug.Log($"Turn check for Player {playerNumber}: Current={currentPlayer}, My={myPlayerNumber}, IsMyTurn={isMyTurn}");
-        
-        return isMyTurn;
+        return currentPlayer == playerNumber;
     }
 
     void HandleInput()
