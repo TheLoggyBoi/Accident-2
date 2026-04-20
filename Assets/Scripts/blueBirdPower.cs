@@ -57,8 +57,8 @@ public class blueBirdPower : MonoBehaviour
 
         // Strip any slingshot/network scripts immediately — before their Start() runs
         // so nothing can set isKinematic = true on us after we set it false.
-        foreach (var sc in clone.GetComponents<SlingShotController>())
-            Destroy(sc);
+        foreach (var nb in clone.GetComponents<SlingShotController>())
+            Destroy(nb);
         foreach (var nb in clone.GetComponents<Unity.Netcode.NetworkBehaviour>())
             Destroy(nb);
         foreach (var no in clone.GetComponents<Unity.Netcode.NetworkObject>())
