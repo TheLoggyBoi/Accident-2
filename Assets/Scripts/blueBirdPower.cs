@@ -55,6 +55,15 @@ public class blueBirdPower : MonoBehaviour
 
         GameObject clone = Instantiate(clonePrefab, transform.position, transform.rotation);
 
+        // Strip any slingshot/network scripts immediately — before their Start() runs
+        // so nothing can set isKinematic = true on us after we set it false.
+        foreach (var sc in clone.GetComponents<SlingShotController>())
+            Destroy(sc);
+        foreach (var nb in clone.GetComponents<Unity.Netcode.NetworkBehaviour>())
+            Destroy(nb);
+        foreach (var no in clone.GetComponents<Unity.Netcode.NetworkObject>())
+            Destroy(no);
+
         // Ensure tag is set for board collision detection
         clone.tag = "Bird";
 
@@ -65,19 +74,20 @@ public class blueBirdPower : MonoBehaviour
             col.radius = 0.5f;
         }
 
-        // Get or add rigidbody
+        // Get or add rigidbody and force non-kinematic immediately
         Rigidbody cloneRb = clone.GetComponent<Rigidbody>();
         if (cloneRb == null)
             cloneRb = clone.AddComponent<Rigidbody>();
 
-        // Must be non-kinematic before setting velocity
         cloneRb.isKinematic = false;
+        cloneRb.useGravity = true;
 
-        // Wait one fixed frame so Unity registers the rigidbody properly
+        // Wait one fixed frame then apply velocity
         yield return new WaitForFixedUpdate();
 
-        if (cloneRb != null)
-            cloneRb.linearVelocity = targetVelocity;
+        // Re-assert in case anything snuck in during that frame
+        cloneRb.isKinematic = false;
+        cloneRb.linearVelocity = targetVelocity;
 
         // Add the clone collision handler
         BlueBirdClone cloneScript = clone.GetComponent<BlueBirdClone>();
