@@ -198,37 +198,6 @@ RectTransform:
   m_AnchoredPosition: {x: 15.4, y: -194}
   m_SizeDelta: {x: 137.555, y: 16.7636}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &5963216
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5963217}
-  m_Layer: 0
-  m_Name: Blue Bird Duplicate Left
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5963217
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5963216}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.99, y: 2.45, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1591630285}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39742509 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5843960783489184196, guid: 9279dd48735483a47a11792e607f3f77, type: 3}
@@ -1408,37 +1377,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526569515}
   m_CullTransparentMesh: 1
---- !u!1 &560369706
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 560369707}
-  m_Layer: 0
-  m_Name: Blue Bird Duplicate Right
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &560369707
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560369706}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.68, y: 2.66, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1591630285}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561736727
 GameObject:
   m_ObjectHideFlags: 0
@@ -8258,13 +8196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6180019209210319770, guid: 16689566c4cc6914f94077601a63a518, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5963217}
-    - targetCorrespondingSourceObject: {fileID: 6180019209210319770, guid: 16689566c4cc6914f94077601a63a518, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 560369707}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6811701131658529056, guid: 16689566c4cc6914f94077601a63a518, type: 3}
       insertIndex: -1
@@ -8578,8 +8510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clonePrefab: {fileID: 6811701131658529056, guid: 93ad65e92eac23043b389643fcdc40e6, type: 3}
-  cloneCount: 2
-  spreadAngle: 15
+  spreadAngle: 20
   abilityKey: 100
 --- !u!114 &5948534090480179489
 MonoBehaviour:
@@ -8594,8 +8525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clonePrefab: {fileID: 6811701131658529056, guid: 93ad65e92eac23043b389643fcdc40e6, type: 3}
-  cloneCount: 2
-  spreadAngle: 15
+  spreadAngle: 20
   abilityKey: 100
 --- !u!114 &6254772115354892509 stripped
 MonoBehaviour:
@@ -9234,8 +9164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clonePrefab: {fileID: 7759590229683615627, guid: 625202519a0540348ba3152564d4cd9a, type: 3}
-  cloneCount: 2
-  spreadAngle: 15
+  spreadAngle: 20
   abilityKey: 100
 --- !u!114 &8055815074741346368
 MonoBehaviour:
@@ -9250,8 +9179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clonePrefab: {fileID: 7759590229683615627, guid: 625202519a0540348ba3152564d4cd9a, type: 3}
-  cloneCount: 2
-  spreadAngle: 15
+  spreadAngle: 20
   abilityKey: 100
 --- !u!120 &8441379704965697192 stripped
 LineRenderer:
