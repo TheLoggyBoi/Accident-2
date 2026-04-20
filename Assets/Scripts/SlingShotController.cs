@@ -234,7 +234,13 @@ public class SlingShotController : NetworkBehaviour
         if (currentCamera == null) return;
         
         Ray mouseRay = currentCamera.ScreenPointToRay(Input.mousePosition);
-        Plane dragPlane = new Plane(Vector3.up, startPos);
+
+        // Use the slingshot's own forward axis as the plane normal so Player 2
+        // (which faces the opposite direction) gets the correct drag plane.
+        Vector3 planeNormal = transform.parent != null
+            ? transform.parent.up
+            : Vector3.up;
+        Plane dragPlane = new Plane(planeNormal, startPos);
         Vector3 worldMouse = startPos;
 
         if (dragPlane.Raycast(mouseRay, out float distance))
@@ -335,8 +341,10 @@ public class SlingShotController : NetworkBehaviour
     {
         if (leftBand == null || rightBand == null || leftPost == null || rightPost == null) return;
 
-        Vector3 midLeft = (leftPost.position + transform.position) / 2; midLeft.y -= 0.5f;
-        Vector3 midRight = (rightPost.position + transform.position) / 2; midRight.y -= 0.5f;
+        // Dip the midpoint downward in world space so the band sags naturally
+        // regardless of which direction the slingshot is facing.
+        Vector3 midLeft  = (leftPost.position  + transform.position) / 2f + Vector3.down * 0.5f;
+        Vector3 midRight = (rightPost.position + transform.position) / 2f + Vector3.down * 0.5f;
 
         leftBand.SetPosition(0, leftPost.position);
         leftBand.SetPosition(1, midLeft);
