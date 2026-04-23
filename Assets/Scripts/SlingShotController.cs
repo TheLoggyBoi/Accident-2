@@ -44,9 +44,7 @@ public class SlingShotController : NetworkBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        startPos = transform.position;
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
+        CaptureStartPosition();
 
         if (leftBand != null) { leftBand.positionCount = 3; leftBand.enabled = false; }
         if (rightBand != null) { rightBand.positionCount = 3; rightBand.enabled = false; }
@@ -55,6 +53,33 @@ public class SlingShotController : NetworkBehaviour
         if (rb != null) rb.isKinematic = true;
 
         Debug.Log($"Slingshot initialized for Player {playerNumber}");
+    }
+
+    void OnEnable()
+    {
+        // Re-capture position every time this bird is activated,
+        // so startPos is always the slingshot seat — not wherever it was at scene load.
+        CaptureStartPosition();
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.isKinematic = true;
+        }
+
+        isDragging = false;
+        isLaunched = false;
+        hasHitBoard = false;
+        currentStage = AimingStage.None;
+        verticalOffset = 0f;
+    }
+
+    void CaptureStartPosition()
+    {
+        startPos = transform.position;
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
     }
 
     public override void OnNetworkSpawn()
