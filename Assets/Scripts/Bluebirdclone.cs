@@ -30,4 +30,11 @@ public class Bluebirdclone : MonoBehaviour
             Debug.Log($"Blue bird clone claimed square for player {playerNumber}");
         }
     }
+    private void OnCollision(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
