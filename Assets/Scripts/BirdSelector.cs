@@ -26,6 +26,7 @@ public class BirdSelector : MonoBehaviour
         // Wire up buttons
         for (int i = 0; i < buttons.Length; i++)
         {
+            int index = i; // capture for lambda
             if (buttons[i] != null)
                 buttons[i].onClick.AddListener(() => SelectBird(index));
         }
