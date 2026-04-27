@@ -22,6 +22,15 @@
 - Added comprehensive debug logging to track launch execution
 - Added warning if TurnManager isn't available during launch
 
+### 3. Player 2 Can't Use Blue Bird Power-Up
+**Root Cause**: The ability script was checking `IsOwner` which is a network ownership check, but Player 2's bird might not have the correct network ownership even when it's their turn.
+
+**Solution**:
+- Replaced `IsOwner` check with TurnManager-based turn validation
+- Now checks if it's the player's turn AND if the bird belongs to that player
+- Added debug logging to track when ability is activated
+- Added velocity check warning for better debugging
+
 ## Code Changes
 
 ### SlingShotController.cs
@@ -33,8 +42,12 @@
 6. Added network variable change callbacks
 
 ### blueBirdPower.cs
-1. Added check to prevent ability activation during drag
-2. Uses new `IsDragging()` method from SlingShotController
+1. **FIXED**: Replaced network ownership check with turn-based validation
+2. Now uses `TurnManager.GetCurrentPlayer()` and `GetMyPlayerNumber()` to validate turns
+3. Added check to prevent ability activation during drag
+4. Uses new `IsDragging()` method from SlingShotController
+5. Added comprehensive debug logging for ability activation
+6. Added velocity check warning
 
 ## Testing Recommendations
 
@@ -49,13 +62,17 @@
    - Terry should not disappear after launch
    - Turn should switch to Player 1 after Terry hits something or settles
 
-3. **Test Blue Bird Ability**:
-   - Blue bird ability (Space key) should only activate after launch
+3. **Test Blue Bird Ability (BOTH PLAYERS)**:
+   - **Player 1**: Should be able to press Space to activate ability after launching blue bird
+   - **Player 2**: Should be able to press Space to activate ability after launching blue bird
+   - Ability should only activate when bird is in flight (not kinematic)
    - Ability should not interfere with dragging
    - Clones should spawn correctly for both players
+   - Each clone should claim squares for the correct player
 
 ## Additional Notes
 
 - All changes maintain backward compatibility with Player 1
-- Network synchronization is owner-authoritative (the player whose turn it is controls the bird)
+- Turn validation is now consistent across all bird abilities
 - Debug logging has been enhanced for easier troubleshooting
+- The fix ensures both players have equal access to bird abilities during their turn

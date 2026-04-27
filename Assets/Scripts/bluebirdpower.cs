@@ -24,14 +24,30 @@ public class bluebirdpower : MonoBehaviour
         if (hasActivated) return;
         if (rb == null || rb.isKinematic) return;
 
-        // Only the owner of this slingshot should be able to activate it
-        if (sc != null && !sc.IsOwner) return;
-        
-        // Don't activate if the bird is being dragged
-        if (sc != null && sc.IsDragging()) return;
+        // Check if it's this player's turn via TurnManager
+        if (sc != null)
+        {
+            // Only allow ability if it's the player's turn
+            if (TurnManager.Instance != null)
+            {
+                int currentPlayer = TurnManager.Instance.GetCurrentPlayer();
+                int myPlayerNumber = TurnManager.Instance.GetMyPlayerNumber();
+                int birdPlayerNumber = sc.GetPlayerNumber();
+                
+                // Only activate if it's my turn AND this is my bird
+                if (currentPlayer != myPlayerNumber || birdPlayerNumber != myPlayerNumber)
+                {
+                    return;
+                }
+            }
+            
+            // Don't activate if the bird is being dragged
+            if (sc.IsDragging()) return;
+        }
 
         if (!Input.GetKeyDown(abilityKey)) return;
 
+        Debug.Log($"Blue bird ability activated! Player: {(sc != null ? sc.GetPlayerNumber() : 0)}");
         Activate();
     }
 
@@ -40,7 +56,13 @@ public class bluebirdpower : MonoBehaviour
         hasActivated = true;
 
         Vector3 velocity = rb.linearVelocity;
-        if (velocity.sqrMagnitude < 0.01f) return;
+        if (velocity.sqrMagnitude < 0.01f)
+        {
+            Debug.LogWarning("Blue bird velocity too low to activate ability");
+            return;
+        }
+
+        Debug.Log($"Blue bird ability activating with velocity: {velocity}");
 
         Vector3 leftVelocity = Quaternion.AngleAxis(-spreadAngle, Vector3.up) * velocity;
         Vector3 rightVelocity = Quaternion.AngleAxis(spreadAngle, Vector3.up) * velocity;
