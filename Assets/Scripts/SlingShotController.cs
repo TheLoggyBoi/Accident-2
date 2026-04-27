@@ -57,22 +57,26 @@ public class SlingShotController : NetworkBehaviour
 
     void OnEnable()
     {
-        // Re-capture position every time this bird is activated,
-        // so startPos is always the slingshot seat — not wherever it was at scene load.
-        CaptureStartPosition();
-
-        if (rb != null)
+        // Only reset if we're not currently dragging
+        // This prevents the bird from glitching back to spawn during Player 2's drag
+        if (!isDragging)
         {
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.isKinematic = true;
-        }
+            // Re-capture position every time this bird is activated,
+            // so startPos is always the slingshot seat — not wherever it was at scene load.
+            CaptureStartPosition();
 
-        isDragging = false;
-        isLaunched = false;
-        hasHitBoard = false;
-        currentStage = AimingStage.None;
-        verticalOffset = 0f;
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
+            }
+
+            isLaunched = false;
+            hasHitBoard = false;
+            currentStage = AimingStage.None;
+            verticalOffset = 0f;
+        }
     }
 
     void CaptureStartPosition()

@@ -497,37 +497,46 @@ public class TurnManager : NetworkBehaviour
 
    void Update()
     {
-        if (blackbird1.activeInHierarchy)
+        // Only update slingshot references if they're not currently set
+        // This prevents constant reassignment which can interfere with dragging
+        if (player1Slingshot == null)
         {
-            player1Slingshot = blackbird1controller;    
+            if (blackbird1.activeInHierarchy)
+            {
+                player1Slingshot = blackbird1controller;    
+            }
+            else if (redbird1.activeInHierarchy)
+            {
+                player1Slingshot = redbird1controller;           
+            }
+            else if (whitebird1.activeInHierarchy)
+            {
+                player1Slingshot = whitebird1controller;            
+            }
+            else if (tictacandtoe1.activeInHierarchy)
+            {
+                player1Slingshot = tictacandtoe1controller;     
+            }
         }
-        if (blackbird2.activeInHierarchy)
+        
+        if (player2Slingshot == null)
         {
-            player2Slingshot = blackbird2controller;      
-        }
-        if (redbird1.activeInHierarchy)
-        {
-            player1Slingshot = redbird1controller;           
-        }
-        if (redbird2.activeInHierarchy)
-        {
-            player2Slingshot = redbird2controller;
-        }
-        if (whitebird1.activeInHierarchy)
-        {
-            player1Slingshot = whitebird1controller;            
-        }
-        if (whitebird2.activeInHierarchy)
-        {
-            player2Slingshot = whitebird2controller;
-        }
-        if (tictacandtoe1.activeInHierarchy)
-        {
-            player1Slingshot = tictacandtoe1controller;     
-        }
-        if (tictacandtoe2.activeInHierarchy)
-        {
-            player2Slingshot = tictacandtoe2controller;
+            if (blackbird2.activeInHierarchy)
+            {
+                player2Slingshot = blackbird2controller;      
+            }
+            else if (redbird2.activeInHierarchy)
+            {
+                player2Slingshot = redbird2controller;
+            }
+            else if (whitebird2.activeInHierarchy)
+            {
+                player2Slingshot = whitebird2controller;
+            }
+            else if (tictacandtoe2.activeInHierarchy)
+            {
+                player2Slingshot = tictacandtoe2controller;
+            }
         }
     }
 
