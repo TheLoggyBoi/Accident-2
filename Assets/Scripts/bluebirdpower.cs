@@ -26,6 +26,9 @@ public class bluebirdpower : MonoBehaviour
 
         // Only the owner of this slingshot should be able to activate it
         if (sc != null && !sc.IsOwner) return;
+        
+        // Don't activate if the bird is being dragged
+        if (sc != null && sc.IsDragging()) return;
 
         if (!Input.GetKeyDown(abilityKey)) return;
 

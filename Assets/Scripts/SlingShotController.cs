@@ -56,13 +56,25 @@ public class SlingShotController : NetworkBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
+        // Ensure rigidbody exists
+        if (rb == null)
+        {
+            Debug.LogError($"No Rigidbody found on Player {playerNumber} bird! Adding one...");
+            rb = gameObject.AddComponent<Rigidbody>();
+        }
+        
         CaptureStartPosition();
 
         if (leftBand != null) { leftBand.positionCount = 3; leftBand.enabled = false; }
         if (rightBand != null) { rightBand.positionCount = 3; rightBand.enabled = false; }
         if (trajectoryLine != null) { trajectoryLine.positionCount = trajectoryPoints; trajectoryLine.enabled = false; }
 
-        if (rb != null) rb.isKinematic = true;
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.useGravity = true;
+        }
 
         Debug.Log($"Slingshot initialized for Player {playerNumber}");
     }
@@ -117,7 +129,7 @@ public class SlingShotController : NetworkBehaviour
     void OnDragPositionChanged(Vector3 previousValue, Vector3 newValue)
     {
         // Non-owners should sync the drag position
-        if (!IsOwner && networkIsDragging.Value)
+        if (!IsOwner && networkIsDragging.Value && !isLaunched)
         {
             transform.position = newValue;
             UpdateBands();
@@ -147,6 +159,13 @@ public class SlingShotController : NetworkBehaviour
         if (canHandleInput)
         {
             HandleInput();
+        }
+        
+        // Sync position during drag for all clients to see
+        if (isDragging && IsOwner && isNetworkSpawned)
+        {
+            // Continuously update network position while dragging
+            networkDragPosition.Value = transform.position;
         }
     }
     
@@ -387,22 +406,26 @@ public class SlingShotController : NetworkBehaviour
                 Debug.LogError($"Failed to notify turn manager: {e.Message}");
             }
         }
+        else
+        {
+            Debug.LogWarning($"TurnManager not available for Player {playerNumber} launch notification");
+        }
     }
 
     [ClientRpc]
     void ExecuteLaunchClientRpc(Vector3 pullVector)
     {
+        Debug.Log($"ExecuteLaunchClientRpc called for Player {playerNumber}");
         ExecuteLaunchLocal(pullVector);
     }
 
     void ExecuteLaunchLocal(Vector3 pullVector)
     {
-        Debug.Log($"Executing launch locally for Player {playerNumber}");
+        Debug.Log($"Executing launch locally for Player {playerNumber}, IsOwner: {IsOwner}");
 
         isDragging = false;
         isLaunched = true;
         hasHitBoard = false;
-        if (rb != null) rb.isKinematic = false;
         currentStage = AimingStage.None;
         
         // Sync dragging state over network if owner
@@ -410,8 +433,21 @@ public class SlingShotController : NetworkBehaviour
         {
             networkIsDragging.Value = false;
         }
-
-        if (rb != null) rb.AddForce(pullVector * forceMultiplier, ForceMode.Impulse);
+        
+        // CRITICAL: Make sure rigidbody is enabled before applying force
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            
+            // Apply force
+            rb.AddForce(pullVector * forceMultiplier, ForceMode.Impulse);
+            Debug.Log($"Applied force to Player {playerNumber} bird: {pullVector * forceMultiplier}, Velocity: {rb.linearVelocity}");
+        }
+        else
+        {
+            Debug.LogError($"Rigidbody is null for Player {playerNumber} bird!");
+        }
 
         CameraFollowBird cameraFollow = FindFirstObjectByType<CameraFollowBird>();
         if (cameraFollow != null) cameraFollow.OnBirdLaunched();
@@ -609,6 +645,7 @@ public class SlingShotController : NetworkBehaviour
     public bool IsLaunched() => isLaunched;
     public bool HasHitBoard() => hasHitBoard;
     public int GetPlayerNumber() => playerNumber;
+    public bool IsDragging() => isDragging;
 
     private void CancelAiming()
     {
