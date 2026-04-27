@@ -1894,7 +1894,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8055815074741346365}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -2814,7 +2814,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8055815074741346365}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -3698,7 +3698,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8055815074741346364}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
         m_MethodName: teleportobject
         m_Mode: 1
@@ -5255,7 +5255,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8055815074741346365}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -7196,10 +7196,6 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 3403630630
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: clonePrefab
-      value: 
-      objectReference: {fileID: 2868075963260819617, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
     - target: {fileID: 6629046659875907874, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
       propertyPath: startpoint
       value: 
@@ -7208,7 +7204,10 @@ PrefabInstance:
       propertyPath: resetpoint
       value: 
       objectReference: {fileID: 1378772680}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2523661333449898324, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
+    - {fileID: 6887909871618095522, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
+    - {fileID: 6629046659875907874, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -8617,28 +8616,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2079203172100239766, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
   m_PrefabInstance: {fileID: 1043539064804659843}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8055815074741346364 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2523661333449898324, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
-  m_PrefabInstance: {fileID: 36180092932190644}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8246108038937957240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8055815074741346365 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6887909871618095522, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
-  m_PrefabInstance: {fileID: 36180092932190644}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8246108038937957240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8246108038937957240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2868075963260819617, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
@@ -8656,7 +8633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029182f043fdd304aaeb7165d7d2e567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clonePrefab: {fileID: 2868075963260819617, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
+  clonePrefab: {fileID: 8246108038937957240}
   spreadAngle: 20
   abilityKey: 100
   cloneLifetime: 5
