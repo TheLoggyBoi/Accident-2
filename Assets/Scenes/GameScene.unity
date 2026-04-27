@@ -7882,7 +7882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029182f043fdd304aaeb7165d7d2e567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clonePrefab: {fileID: 8345198681414841669, guid: abf81fe330d2fd44880a9f2ea81128bb, type: 3}
+  clonePrefab: {fileID: 1591630286}
   spreadAngle: 20
   abilityKey: 100
   cloneLifetime: 5
@@ -8633,7 +8633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029182f043fdd304aaeb7165d7d2e567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clonePrefab: {fileID: 2868075963260819617, guid: ff165d5513c20a2428c17cecb5f28830, type: 3}
+  clonePrefab: {fileID: 8246108038937957240}
   spreadAngle: 20
   abilityKey: 100
   cloneLifetime: 5
