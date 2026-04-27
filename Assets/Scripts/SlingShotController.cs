@@ -40,6 +40,18 @@ public class SlingShotController : NetworkBehaviour
 
     // Safety flags
     private bool isNetworkSpawned = false;
+    
+    // Network synchronization for drag position
+    private NetworkVariable<Vector3> networkDragPosition = new NetworkVariable<Vector3>(
+        Vector3.zero,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Owner
+    );
+    private NetworkVariable<bool> networkIsDragging = new NetworkVariable<bool>(
+        false,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Owner
+    );
 
     void Start()
     {
@@ -57,26 +69,22 @@ public class SlingShotController : NetworkBehaviour
 
     void OnEnable()
     {
-        // Only reset if we're not currently dragging
-        // This prevents the bird from glitching back to spawn during Player 2's drag
-        if (!isDragging)
+        // Re-capture position every time this bird is activated,
+        // so startPos is always the slingshot seat — not wherever it was at scene load.
+        CaptureStartPosition();
+
+        if (rb != null)
         {
-            // Re-capture position every time this bird is activated,
-            // so startPos is always the slingshot seat — not wherever it was at scene load.
-            CaptureStartPosition();
-
-            if (rb != null)
-            {
-                rb.linearVelocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-                rb.isKinematic = true;
-            }
-
-            isLaunched = false;
-            hasHitBoard = false;
-            currentStage = AimingStage.None;
-            verticalOffset = 0f;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.isKinematic = true;
         }
+
+        isDragging = false;
+        isLaunched = false;
+        hasHitBoard = false;
+        currentStage = AimingStage.None;
+        verticalOffset = 0f;
     }
 
     void CaptureStartPosition()
@@ -91,11 +99,42 @@ public class SlingShotController : NetworkBehaviour
         isNetworkSpawned = true;
         Debug.Log($"SlingShotController Player {playerNumber} NETWORK SPAWNED! IsOwner: {IsOwner}, ClientId: {OwnerClientId}, GameObject: {gameObject.name}");
         Debug.Log($"Player {playerNumber} slingshot is now network ready!");
+        
+        // Subscribe to network variable changes
+        networkDragPosition.OnValueChanged += OnDragPositionChanged;
+        networkIsDragging.OnValueChanged += OnDraggingStateChanged;
     }
 
     public override void OnNetworkDespawn()
     {
         isNetworkSpawned = false;
+        
+        // Unsubscribe from network variable changes
+        if (networkDragPosition != null) networkDragPosition.OnValueChanged -= OnDragPositionChanged;
+        if (networkIsDragging != null) networkIsDragging.OnValueChanged -= OnDraggingStateChanged;
+    }
+    
+    void OnDragPositionChanged(Vector3 previousValue, Vector3 newValue)
+    {
+        // Non-owners should sync the drag position
+        if (!IsOwner && networkIsDragging.Value)
+        {
+            transform.position = newValue;
+            UpdateBands();
+            UpdateTrajectory();
+        }
+    }
+    
+    void OnDraggingStateChanged(bool previousValue, bool newValue)
+    {
+        // Sync dragging state for non-owners
+        if (!IsOwner)
+        {
+            isDragging = newValue;
+            if (leftBand != null) leftBand.enabled = newValue;
+            if (rightBand != null) rightBand.enabled = newValue;
+            if (trajectoryLine != null) trajectoryLine.enabled = newValue;
+        }
     }
 
     void Update()
@@ -235,6 +274,12 @@ public class SlingShotController : NetworkBehaviour
 
         initialMouseY = Input.mousePosition.y;
         verticalOffset = 0f;
+        
+        // Sync dragging state over network if owner
+        if (IsOwner)
+        {
+            networkIsDragging.Value = true;
+        }
     }
 
     void UpdateVerticalAiming()
@@ -244,6 +289,12 @@ public class SlingShotController : NetworkBehaviour
 
         Vector3 newPos = startPos + new Vector3(0, verticalOffset, 0);
         transform.position = newPos;
+        
+        // Sync position over network if owner
+        if (IsOwner)
+        {
+            networkDragPosition.Value = newPos;
+        }
 
         UpdateBands();
         UpdateTrajectory();
@@ -277,6 +328,12 @@ public class SlingShotController : NetworkBehaviour
         totalDrag = Vector3.ClampMagnitude(totalDrag, maxStretch);
 
         transform.position = startPos + totalDrag;
+        
+        // Sync position over network if owner
+        if (IsOwner)
+        {
+            networkDragPosition.Value = startPos + totalDrag;
+        }
 
         UpdateBands();
         UpdateTrajectory();
@@ -347,6 +404,12 @@ public class SlingShotController : NetworkBehaviour
         hasHitBoard = false;
         if (rb != null) rb.isKinematic = false;
         currentStage = AimingStage.None;
+        
+        // Sync dragging state over network if owner
+        if (IsOwner)
+        {
+            networkIsDragging.Value = false;
+        }
 
         if (rb != null) rb.AddForce(pullVector * forceMultiplier, ForceMode.Impulse);
 
@@ -554,6 +617,13 @@ public class SlingShotController : NetworkBehaviour
         currentStage = AimingStage.None;
         verticalOffset = 0f;
         transform.position = startPos;
+        
+        // Sync dragging state over network if owner
+        if (IsOwner)
+        {
+            networkIsDragging.Value = false;
+            networkDragPosition.Value = startPos;
+        }
 
         if (leftBand != null) leftBand.enabled = false;
         if (rightBand != null) rightBand.enabled = false;
