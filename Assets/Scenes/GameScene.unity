@@ -1834,7 +1834,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 672319058935396143}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -1846,7 +1846,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5668080755313942409}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -2754,7 +2754,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 672319058935396143}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -2766,7 +2766,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5668080755313942409}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -3710,7 +3710,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 672319058935396143}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -3722,7 +3722,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5668080755313942409}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: resetteleporter, Assembly-CSharp
         m_MethodName: TeleportObject
         m_Mode: 1
@@ -5171,7 +5171,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 672319058935396144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
         m_MethodName: teleportobject
         m_Mode: 1
@@ -5183,7 +5183,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5668080755313942411}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: teleporter, Assembly-CSharp
         m_MethodName: teleportobject
         m_Mode: 1
@@ -7398,45 +7398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f2218dfb734e24db89b267a50e5392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &672319058935396143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576371100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resetpoint: {fileID: 1378772680}
---- !u!114 &672319058935396144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576371100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 1695753782}
---- !u!114 &672319058935396145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576371100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2e59d348cfef6408f06e9feb822227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startpoint: {fileID: 1378772680}
 --- !u!1001 &1043539064804659843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7614,16 +7575,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2793877200013611657, guid: 5c863594df4d0484789d075433e90e3d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 672319058935396145}
-    - targetCorrespondingSourceObject: {fileID: 2793877200013611657, guid: 5c863594df4d0484789d075433e90e3d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 672319058935396144}
-    - targetCorrespondingSourceObject: {fileID: 2793877200013611657, guid: 5c863594df4d0484789d075433e90e3d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 672319058935396143}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c863594df4d0484789d075433e90e3d, type: 3}
 --- !u!1 &1929464938395017227 stripped
 GameObject:
@@ -7859,16 +7811,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5035800391494378835, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5668080755313942411}
-    - targetCorrespondingSourceObject: {fileID: 5035800391494378835, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5668080755313942410}
-    - targetCorrespondingSourceObject: {fileID: 5035800391494378835, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5668080755313942409}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
 --- !u!114 &5442516109865528340
 MonoBehaviour:
@@ -7891,45 +7834,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5668080756954234857, guid: 912ef5dbeec517d4f93ac0393a5a28d4, type: 3}
   m_PrefabInstance: {fileID: 5341095743634895688}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5668080755313942409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5035800389770233151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dcb4ab2b5b661840ab8d385c8ec4e4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resetpoint: {fileID: 1378772680}
---- !u!114 &5668080755313942410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5035800389770233151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2e59d348cfef6408f06e9feb822227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startpoint: {fileID: 1378772680}
---- !u!114 &5668080755313942411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5035800389770233151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2972a27eb50655e4c9162c0223044c1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 964699425}
 --- !u!1001 &5847350833208956517
 PrefabInstance:
   m_ObjectHideFlags: 0
