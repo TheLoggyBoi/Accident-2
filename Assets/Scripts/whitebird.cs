@@ -2,8 +2,15 @@ using UnityEngine;
 
 public class whitebird : MonoBehaviour
 {
+    [Header("Settings")]
     public Rigidbody rb;
     public float downwardPushforce = 10f;
+    
+    [Header("Input Options")]
+    [Tooltip("Primary key to activate ability")]
+    public KeyCode abilityKey = KeyCode.Space;
+    [Tooltip("Allow mouse click to activate ability")]
+    public bool allowMouseClick = true;
     
     private bool hasActivated = false;
     private SlingShotController sc;
@@ -40,7 +47,13 @@ public class whitebird : MonoBehaviour
             if (sc.IsDragging()) return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Check for keyboard input
+        bool keyPressed = Input.GetKeyDown(abilityKey);
+        
+        // Check for mouse click input (if enabled)
+        bool mouseClicked = allowMouseClick && Input.GetMouseButtonDown(0);
+
+        if (keyPressed || mouseClicked)
         {
             Debug.Log($"White bird ability activated! Player: {(sc != null ? sc.GetPlayerNumber() : 0)}");
             applydownwardPush();
@@ -60,4 +73,15 @@ public class whitebird : MonoBehaviour
             Debug.Log($"White bird pushed down with force: {downwardPushforce}");
         }
     }
+    
+    // Public method that can be called from UI buttons
+    public void ActivateAbility()
+    {
+        if (!hasActivated && rb != null && !rb.isKinematic)
+        {
+            Debug.Log($"White bird ability activated via button! Player: {(sc != null ? sc.GetPlayerNumber() : 0)}");
+            applydownwardPush();
+        }
+    }
 }
+

@@ -31,6 +31,19 @@
 - Added debug logging to track when ability is activated
 - Added velocity check warning for better debugging
 
+### 4. White Bird Power-Up Cuts Turn Short
+**Root Cause**: The white bird script had an `OnCollisionEnter` that called `ClearSquare()` on every collision, which was interfering with the turn system and causing the turn to end prematurely.
+
+**Solution**:
+- Removed the problematic `OnCollisionEnter` method
+- Removed unused `TicTacToeBoard` and `TicTacToeSquare` references
+- Added proper turn validation (same as blue bird)
+- Changed from `GetKeyUp` to `GetKeyDown` for more responsive input
+- Added `hasActivated` flag to prevent multiple activations
+- Removed velocity zeroing - now adds downward force while maintaining momentum
+- Added `IsDragging()` check to prevent activation during drag
+- Added comprehensive debug logging
+
 ## Code Changes
 
 ### SlingShotController.cs
@@ -48,6 +61,17 @@
 4. Uses new `IsDragging()` method from SlingShotController
 5. Added comprehensive debug logging for ability activation
 6. Added velocity check warning
+
+### whitebird.cs
+1. **FIXED**: Removed problematic `OnCollisionEnter` that was ending turns early
+2. Added turn validation using TurnManager (same pattern as blue bird)
+3. Added `hasActivated` flag to prevent multiple activations
+4. Changed input from `GetKeyUp` to `GetKeyDown` for better responsiveness
+5. Removed velocity zeroing - maintains bird momentum while adding downward push
+6. Added `IsDragging()` check to prevent activation during drag
+7. Added `Awake()` to properly initialize Rigidbody and SlingShotController
+8. Removed unused TicTacToeBoard and TicTacToeSquare references
+9. Added comprehensive debug logging
 
 ## Testing Recommendations
 
@@ -70,9 +94,19 @@
    - Clones should spawn correctly for both players
    - Each clone should claim squares for the correct player
 
+4. **Test White Bird Ability (BOTH PLAYERS)**:
+   - **Player 1**: Should be able to press Space to push bird downward after launch
+   - **Player 2**: Should be able to press Space to push bird downward after launch
+   - Ability should add downward force while maintaining horizontal momentum
+   - **CRITICAL**: Turn should NOT end early when ability is used
+   - Turn should only end when bird hits board or ground (normal behavior)
+   - Ability should only activate once per launch
+   - Ability should not activate during drag
+
 ## Additional Notes
 
 - All changes maintain backward compatibility with Player 1
 - Turn validation is now consistent across all bird abilities
 - Debug logging has been enhanced for easier troubleshooting
 - The fix ensures both players have equal access to bird abilities during their turn
+- White bird no longer interferes with the turn system or board state

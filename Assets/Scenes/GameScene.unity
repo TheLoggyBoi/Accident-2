@@ -8016,8 +8016,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2334802830572851445}
   downwardPushforce: 10
-  TicTacToeBoard: {fileID: 7154848866564599387}
-  TicTacToeSquare: {fileID: 0}
+  abilityKey: 32
+  allowMouseClick: 1
 --- !u!1001 &6755170921665150855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8529,6 +8529,11 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 4081000081831742098, guid: d1ef32ae63f0c7b45959c29d06c80480, type: 3}
   m_PrefabInstance: {fileID: 5923011688487024224}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &8595089796691841628 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5238338075026964584, guid: 70f13eed6412cf14da6ddc72b8542229, type: 3}
+  m_PrefabInstance: {fileID: 1043539064804659843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8595089796691841630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8541,10 +8546,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e039bedad824c24192743ec0b1447ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 8595089796691841628}
   downwardPushforce: 10
-  TicTacToeBoard: {fileID: 0}
-  TicTacToeSquare: {fileID: 0}
+  abilityKey: 32
+  allowMouseClick: 0
 --- !u!114 &9111014932904487392
 MonoBehaviour:
   m_ObjectHideFlags: 0
