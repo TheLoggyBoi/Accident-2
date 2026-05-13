@@ -12,7 +12,12 @@ public class whitebird : MonoBehaviour
     [Tooltip("Allow mouse click to activate ability")]
     public bool allowMouseClick = true;
     
+    [Header("Special Ability")]
+    [Tooltip("Can steal opponent's tiles when landing on them")]
+    public bool canStealTiles = true;
+    
     private bool hasActivated = false;
+    private bool abilityUsed = false;
     private SlingShotController sc;
 
     void Awake()
@@ -65,6 +70,7 @@ public class whitebird : MonoBehaviour
         if (rb != null && !hasActivated)
         {
             hasActivated = true;
+            abilityUsed = true;
             
             // Apply downward force without zeroing out existing velocity
             // This keeps the bird's momentum while adding downward push
@@ -81,6 +87,62 @@ public class whitebird : MonoBehaviour
         {
             Debug.Log($"White bird ability activated via button! Player: {(sc != null ? sc.GetPlayerNumber() : 0)}");
             applydownwardPush();
+        }
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Only steal tiles if ability was used
+        if (!abilityUsed || !canStealTiles) return;
+        
+        TryStealSquare(collision.gameObject);
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        // Only steal tiles if ability was used
+        if (!abilityUsed || !canStealTiles) return;
+        
+        TryStealSquare(other.gameObject);
+    }
+    
+    private void TryStealSquare(GameObject target)
+    {
+        // Check the hit object or its parent for a TicTacToeSquare
+        TicTacToeSquare square = target.GetComponent<TicTacToeSquare>()
+            ?? target.GetComponentInParent<TicTacToeSquare>();
+
+        if (square != null && TurnManager.Instance != null)
+        {
+            int currentPlayer = TurnManager.Instance.GetCurrentPlayer();
+            int squareOwner = square.GetOwner();
+            
+            // Check if this square belongs to the opponent
+            if (squareOwner != 0 && squareOwner != currentPlayer)
+            {
+                Debug.Log($"White bird stealing square from Player {squareOwner} for Player {currentPlayer}!");
+                
+                // Clear the square first
+                square.ClearSquare();
+                
+                // Claim it for the current player
+                TicTacToeBoard board = FindFirstObjectByType<TicTacToeBoard>();
+                if (board != null && board.IsSpawned)
+                {
+                    int index = square.GetIndex();
+                    board.RequestClaimSquareServerRpc(index, currentPlayer);
+                }
+                else
+                {
+                    square.OnSquareHit(currentPlayer);
+                }
+            }
+            else if (squareOwner == 0)
+            {
+                // If it's an empty square, just claim it normally
+                Debug.Log($"White bird claiming empty square for Player {currentPlayer}");
+                square.OnSquareHit(currentPlayer);
+            }
         }
     }
 }
